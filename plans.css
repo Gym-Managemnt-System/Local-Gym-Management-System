@@ -1,0 +1,293 @@
+:root{
+  --bg-deep:#1a0800;
+  --bg-mid:#3b0f00;
+  --card-dark:#2a0f04;
+  --card-border:rgba(255,255,255,0.1);
+  --text-main:#fdf6ee;
+  --text-sub:rgba(253,246,238,0.6);
+  --accent-a:#ff4d1c;
+  --accent-b:#ffb703;
+  --gold:#f4d58d;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html,body{
+  height:100%;
+  font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+  background:var(--bg-deep);
+  color:var(--text-main);
+}
+
+.layout{
+  display:flex;
+  min-height:100vh;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar{
+  width:230px;
+  flex-shrink:0;
+  padding:28px 20px;
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(180deg, #b5540f 0%, #7a2e08 45%, #2a0f04 100%);
+  border-right:1px solid rgba(0,0,0,0.3);
+}
+
+.brand{
+  font-size:12px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-weight:600;
+  margin-bottom:32px;
+  opacity:0.9;
+}
+
+.nav-group{
+  margin-bottom:28px;
+}
+
+.nav-label{
+  font-size:10.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.55);
+  margin-bottom:10px;
+}
+
+.nav-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:9px 10px;
+  border-radius:8px;
+  color:rgba(255,255,255,0.85);
+  text-decoration:none;
+  font-size:13.5px;
+  margin-bottom:2px;
+  transition:background .15s ease;
+}
+
+.nav-item .icon{
+  width:16px;
+  text-align:center;
+  font-size:13px;
+}
+
+.nav-item:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+.nav-item.active{
+  background:rgba(255,255,255,0.16);
+  font-weight:600;
+}
+
+.user-card{
+  margin-top:auto;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding-top:16px;
+  border-top:1px solid rgba(255,255,255,0.15);
+}
+
+.avatar{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--accent-a), var(--accent-b));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:700;
+  color:#1a0800;
+}
+
+.user-name{
+  font-size:13px;
+  font-weight:600;
+}
+
+.user-role{
+  font-size:11px;
+  color:rgba(255,255,255,0.6);
+}
+
+/* ---------- Main ---------- */
+.main{
+  flex:1;
+  padding:32px 36px;
+  background:linear-gradient(160deg, #2a0f04 0%, #1a0800 60%);
+  overflow-y:auto;
+}
+
+.page-title{
+  font-size:34px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.page-sub{
+  font-size:13px;
+  color:var(--text-sub);
+  margin-bottom:24px;
+}
+
+/* Plans panel wrapper */
+.plans-panel{
+  background:var(--card-dark);
+  border:1px solid var(--card-border);
+  border-radius:18px;
+  padding:32px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.plans-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.plans-row-center{
+  grid-template-columns:1fr;
+  max-width:calc(50% - 12px);
+  margin:0 auto;
+}
+
+/* Plan card */
+.plan-card{
+  position:relative;
+  background:linear-gradient(160deg, rgba(120,60,20,0.4), rgba(30,12,4,0.6));
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;
+  padding:26px 28px 22px;
+  display:flex;
+  flex-direction:column;
+}
+
+.plan-card.featured{
+  background:linear-gradient(160deg, rgba(232,160,60,0.55), rgba(150,80,20,0.4));
+}
+
+.badge{
+  position:absolute;
+  top:20px;
+  right:24px;
+  background:linear-gradient(90deg, var(--accent-a), #ff7a3c);
+  color:var(--text-main);
+  font-size:10.5px;
+  font-weight:700;
+  padding:4px 12px;
+  border-radius:20px;
+}
+
+.plan-name{
+  font-size:13.5px;
+  font-weight:700;
+  color:var(--gold);
+  margin-bottom:8px;
+}
+
+.featured .plan-name{
+  color:#fff6df;
+}
+
+.plan-price{
+  font-size:26px;
+  font-weight:800;
+  margin-bottom:4px;
+}
+
+.plan-price span{
+  font-size:13px;
+  font-weight:500;
+  color:var(--text-sub);
+}
+
+.plan-billing{
+  font-size:12px;
+  color:var(--text-sub);
+  margin-bottom:18px;
+}
+
+.featured .plan-billing{
+  color:rgba(255,255,255,0.75);
+}
+
+.plan-features{
+  list-style:none;
+  margin-bottom:14px;
+}
+
+.plan-features li{
+  font-size:13.5px;
+  font-weight:600;
+  padding:11px 0;
+  border-bottom:1px solid rgba(255,255,255,0.12);
+}
+
+.plan-features li:first-child{
+  border-top:1px solid rgba(255,255,255,0.12);
+}
+
+.plan-enrolled{
+  font-size:12px;
+  color:var(--text-sub);
+  margin-bottom:20px;
+}
+
+.featured .plan-enrolled{
+  color:rgba(255,255,255,0.7);
+}
+
+.plan-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  margin-top:auto;
+}
+
+.btn-edit, .btn-archive{
+  border:none;
+  border-radius:20px;
+  padding:8px 20px;
+  font-size:12.5px;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease;
+  font-family:inherit;
+}
+
+.btn-edit{
+  background:linear-gradient(90deg, var(--accent-a), #ff7a3c);
+  color:#fff;
+}
+
+.btn-archive{
+  background:linear-gradient(90deg, #e0432a, #ff6a1f);
+  color:#fff;
+}
+
+.btn-edit:hover, .btn-archive:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(0,0,0,0.35);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  .plans-row{grid-template-columns:1fr;}
+  .plans-row-center{max-width:100%;}
+}
+
+@media (max-width:720px){
+  .layout{flex-direction:column;}
+  .sidebar{width:100%;flex-direction:row;flex-wrap:wrap;align-items:center;}
+  .nav-group{display:none;}
+  .user-card{margin-left:auto;border-top:none;padding-top:0;}
+  .plans-panel{padding:20px;}
+}
