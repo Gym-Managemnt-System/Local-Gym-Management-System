@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Schedule a Class</title>
+<link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+
+  <div class="brand">Fitness Center</div>
+  <div class="figure" aria-hidden="true"></div>
+
+  <form class="card" id="scheduleForm" novalidate>
+    <h1>Schedule a class</h1>
+
+    <div class="field">
+      <label for="time">Time</label>
+      <input type="datetime-local" id="time" name="time" required>
+    </div>
+
+    <div class="field">
+      <label for="classType">Class Type</label>
+      <select id="classType" name="classType" required>
+        <option value="" selected disabled hidden></option>
+        <option value="hiit">HIIT Circuit</option>
+        <option value="yoga">Yoga</option>
+        <option value="strength">Strength Basics</option>
+        <option value="spin">Spin</option>
+        <option value="pilates">Pilates</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="trainer">Trainer</label>
+      <select id="trainer" name="trainer" required>
+        <option value="" selected disabled hidden></option>
+        <option value="dilan">Dilan R.</option>
+        <option value="nadee">Nadee H.</option>
+        <option value="chamara">Chamara D.</option>
+        <option value="umesha">Umesha S.</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="members">Add members</label>
+      <select id="members" name="members" multiple></select>
+      <div class="member-select" id="memberSelect">
+        <button type="button" class="member-toggle" id="memberToggle">
+          <span id="memberToggleLabel">Select members</span>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="member-dropdown" id="memberDropdown">
+          <label class="member-option"><input type="checkbox" value="Nadeesha S."> Nadeesha S.</label>
+          <label class="member-option"><input type="checkbox" value="Kasun P."> Kasun P.</label>
+          <label class="member-option"><input type="checkbox" value="Tharindu W."> Tharindu W.</label>
+          <label class="member-option"><input type="checkbox" value="Jayakodi M."> Jayakodi M.</label>
+          <label class="member-option"><input type="checkbox" value="Ishara F."> Ishara F.</label>
+        </div>
+      </div>
+    </div>
+
+    <p class="error" id="errorMsg">Please fill in all required fields.</p>
+
+    <div class="actions">
+      <button type="submit" class="btn-create">Create class</button>
+    </div>
+  </form>
+
+<script src="schedule.js"></script>
+</body>
+</html>
