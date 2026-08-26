@@ -11,13 +11,12 @@
   <div class="brand">Fitness Center</div>
 
   <form class="card" id="checkinForm" novalidate>
-    <h1>Manual check-in</h1>
-    <p class="subtitle">For members without a card or app</p>
+    <h1>Mannual check-in</h1>
+    <p class="lead">For members without a card or app</p>
 
     <div class="field">
-      <label for="member">Search member</label>
-      <input type="text" id="member" name="member" placeholder="Search by name or ID" required autocomplete="off">
-      <div class="suggestions" id="suggestions"></div>
+      <label for="searchMember">Search member</label>
+      <input type="text" id="searchMember" name="searchMember" placeholder="Type a name..." required>
     </div>
 
     <div class="field">
@@ -27,17 +26,18 @@
 
     <div class="field">
       <label for="note">Note (Optional)</label>
-      <input type="text" id="note" name="note" placeholder="Add a note">
+      <input type="text" id="note" name="note" placeholder="e.g. forgot card">
     </div>
 
     <p class="error" id="errorMsg">Please select a member and check-in time.</p>
 
-    <div class="actions">
-      <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button>
+    <div class="btn-row">
+      <a href="attendance.html" class="btn-cancel">Cancel</a>
       <button type="submit" class="btn-confirm">Confirm check-in</button>
     </div>
   </form>
 
-<script src="checkin.js"></script>
+<script src="checkin-script.js"></script>
+
 </body>
 </html>

@@ -43,6 +43,7 @@
   color: #260600
   
 }
+
 .search-box svg{
   width:16px;
   height:16px;
@@ -54,18 +55,15 @@
   border:none;
   background:transparent;
   outline:none;
-  font-size:13px;
+  font-size:14px;
   width:100%;
   color: #260600;
 }
-
 
 .search-box input::placeholder{
   color: #260600;
   /* font-weight: 400px; */
 }
-
-/* CUSTOM DROPDOWN */
 .custom-dropdown{
   position:relative;
 }
@@ -137,7 +135,6 @@
 .custom-dropdown-options li.selected{
   background:#ffb703;
 }
-
 .custom-dropdown-small .custom-dropdown-trigger{
   padding:6px 14px;
   font-size:12px;
@@ -150,76 +147,108 @@
   top:auto;
 }
 
-/* CLASSES GRID */
-.classes-panel{
-  padding:28px;
-  background: #27130b;
-  border: none;
+.filter-select{
+  background: linear-gradient(90deg, rgba(254,217,81,0.88), rgba(255,255,255,0.88));
+  color: var(--card-cream-text);
+  border:none;
+  border-radius:999px;
+  /* padding:15px 26px; */
+  padding-left: 1rem;
+  padding-right: 2rem;
+  font-size:13px;
+  font-weight:550;
+  cursor:pointer;
 }
-
-.class-grid{
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:20px;
-}
-
-.class-card{
-  background: #260600;
-  border:1px solid #260600;
-  border-radius:16px;
-  padding:20px 22px;
-}
-
-.class-card-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:10px;
-}
-
-.class-time{
-  font-size:12px;
+.filter-select option{
+  background: #fce9a8;
+  color: var(--card-cream-text);
   font-weight:600;
-  color: var(--accent-strong);
+  padding:10px;
 }
 
-.class-menu{
+/* TABLE */
+.members-data-table{
+  table-layout: fixed;
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+  margin-top:8px;
+}
+
+.members-data-table thead th{
+  text-align:left;
+  font-size:11px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color: var(--muted);
+  padding-bottom:12px;
+  font-weight:600;
+}
+
+.members-data-table tbody td{
+  padding:12px 8px 12px 0;
+  border-top:1px solid rgba(255,255,255,0.08);
+  vertical-align:middle;
+}
+
+.checkbox-col{
+  width:40px;
+}
+
+.checkbox-col input[type="checkbox"]{
+  width:15px;
+  height:15px;
+  accent-color: var(--accent);
+  cursor:pointer;
+}
+
+/* .members-data-table th:nth-child(2),
+.members-data-table td:nth-child(2){
+  width:%;
+} */
+
+.members-data-table th:nth-child(3),
+.members-data-table td:nth-child(3){
+  width:13%;
+}
+
+.members-data-table th:nth-child(4),
+.members-data-table td:nth-child(4){
+  width:16%;
+}
+
+.members-data-table th:nth-child(5),
+.members-data-table td:nth-child(5){
+  width:16%;
+}
+
+.members-data-table th:nth-child(6),
+.members-data-table td:nth-child(6){
+  width:14%;
+}
+
+.menu-col{
+  width:30px;
+  text-align:right;
   color: var(--muted);
   cursor:pointer;
   font-size:16px;
   letter-spacing:2px;
 }
 
-.class-name{
-  font-size:19px;
-  font-weight:700;
-  color: var(--white);
-  margin-bottom:4px;
+.member-cell{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:600;
+  min-width:0;
 }
 
-.class-trainer{
-  font-size:12px;
-  color: var(--muted);
-  margin-bottom:16px;
-}
-
-.class-progress{
-  height:5px;
-  border-radius:999px;
-  background: rgba(255,255,255,0.1);
+.member-name{
   overflow:hidden;
-  margin-bottom:10px;
-}
-
-.class-progress-fill{
-  height:100%;
-  border-radius:999px;
-  background: linear-gradient(90deg, #7ed957, #ffb347, #ff4d1c);
-}
-
-.class-booked{
-  font-size:12px;
-  color: var(--muted);
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  min-width:0;
 }
 
 .pagination{
@@ -227,7 +256,7 @@
   align-items:center;
   justify-content:center;
   gap:8px;
-  margin-top:28px;
+  margin-top:24px;
 }
 
 .page-nav, .page-btn{
@@ -257,8 +286,19 @@
   padding:0 4px;
 }
 
+.per-page-select{
+  margin-left:12px;
+  background: var(--accent-strong);
+  color: var(--card-cream-text);
+  border:none;
+  border-radius:999px;
+  padding:6px 14px;
+  font-size:12px;
+  font-weight:700;
+  cursor:pointer;
+}
+
 @media (max-width: 900px){
   .filters-row{ flex-wrap:wrap; }
   .search-box{ max-width:100%; flex:1 1 100%; }
-  .class-grid{ grid-template-columns:1fr; }
 }

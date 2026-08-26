@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ironclad Fitness Center — Members</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Asta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="members.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">Fitness Center</div>
+
+    <nav class="nav-group">
+      <div class="nav-label">Overview</div>
+      <a href="dashboard.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Dashboard
+      </a>
+      <a href="members.html" class="nav-item active">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Members
+      </a>
+      <a href="attendance.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Attendance
+      </a>
+      <a href="trainers.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.4 14.4 9.6 9.6"/><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/><path d="m21.5 21.5-1.4-1.4"/><path d="M3.9 3.9 2.5 2.5"/><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/></svg>
+        Trainers
+      </a>
+      <a href="classes.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        Classes
+      </a>
+    </nav>
+
+    <nav class="nav-group">
+      <div class="nav-label">Business</div>
+      <a href="payments.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+        Payments
+      </a>
+      <a href="membership-plans.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+        Membership Plans
+      </a>
+      <a href="reports.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="admin-profile">
+      <img src="../assets/admin1.jpg" alt="Admin avatar" class="admin-avatar" />
+      <div class="admin-info">
+        <div class="admin-name">Greg V.</div>
+        <div class="admin-role">Administrator</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Members</h1>
+        <p class="page-subtitle">584 total | 23 expiring within 7 days</p>
+      </div>
+      <a href="register.html" class="btn-primary">+ Register member</a>
+    </div>
+
+    <div class="filters-row">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search by name" />
+      </div>
+      <div class="custom-dropdown" id="planDropdown">
+  <button type="button" class="custom-dropdown-trigger">
+    <span class="custom-dropdown-label">All plans</span>
+    <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+  </button>
+  <ul class="custom-dropdown-options">
+    <li data-value="all" class="selected">All plans</li>
+    <li data-value="premium">Premium</li>
+    <li data-value="standard">Standard</li>
+    <li data-value="basic">Basic</li>
+  </ul>
+</div>
+
+<div class="custom-dropdown" id="statusDropdown">
+  <button type="button" class="custom-dropdown-trigger">
+    <span class="custom-dropdown-label">All status</span>
+    <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+  </button>
+  <ul class="custom-dropdown-options">
+    <li data-value="all" class="selected">All status</li>
+    <li data-value="active">Active</li>
+    <li data-value="expiring">Expiring soon</li>
+    <li data-value="expired">Expired</li>
+  </ul>
+</div>
+    </div>
+
+    <section class="panel">
+    <div class="table-scroll">
+      <table class="data-table members-data-table">
+        <thead>
+          <tr>
+            <th class="checkbox-col"><input type="checkbox" /></th>
+            <th>Member</th>
+            <th>Plan</th>
+            <th>Joined</th>
+            <th>Expires</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" /></td>
+            <td class="member-cell">
+              <span class="avatar-badge" style="background:#e3573f">NS</span>
+              <span class="member-name">Nadeesha Silva</span>
+            </td>
+            <td>Premium - 12 mo</td>
+            <td>1 - Aug - 2026</td>
+            <td>1 - Aug - 2027</td>
+            <td><span class="status status-active">Active</span></td>
+            <td class="menu-col">⋮</td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" /></td>
+            <td class="member-cell">
+              <span class="avatar-badge" style="background:#4c8c4a">KP</span>
+              <span class="member-name">Kasun Perera</span>
+            </td>
+            <td>Standard -3 mo</td>
+            <td>23 - Jun - 2026</td>
+            <td>23 - Aug - 2026</td>
+            <td><span class="status status-warning">Expiring soon</span></td>
+            <td class="menu-col">⋮</td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" /></td>
+            <td class="member-cell">
+              <span class="avatar-badge" style="background:#c9a227">TW</span>
+              <span class="member-name">Tharindu Wijayarathna</span>
+            </td>
+            <td>Basic- 1 mo</td>
+            <td>4 - Jul - 2026</td>
+            <td>4 - Aug - 2026</td>
+            <td><span class="status status-expired">Expired</span></td>
+            <td class="menu-col">⋮</td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" /></td>
+            <td class="member-cell">
+              <span class="avatar-badge" style="background:#e08a2b">JM</span>
+              <span class="member-name">Jayakodi Mohan</span>
+            </td>
+            <td>Premium- 12 mo</td>
+            <td>3 - Jun - 2026</td>
+            <td>3 - Jun - 2027</td>
+            <td><span class="status status-active">Active</span></td>
+            <td class="menu-col">⋮</td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" /></td>
+            <td class="member-cell">
+              <span class="avatar-badge" style="background:#8a5fd6">IF</span>
+              <span class="member-name">Ishara Fernando</span>
+            </td>
+            <td>Premium- 12 mo</td>
+            <td>29 - May - 2026</td>
+            <td>29 - May - 2027</td>
+            <td><span class="status status-active">Active</span></td>
+            <td class="menu-col">⋮</td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" /></td>
+            <td class="member-cell">
+              <span class="avatar-badge" style="background:#4c8c4a">CD</span>
+              <span class="member-name">Chamara Dias</span>
+            </td>
+            <td>Standard - 3mo</td>
+            <td>15 - Jul - 2026</td>
+            <td>15 - Sep - 2026</td>
+            <td><span class="status status-active">Active</span></td>
+            <td class="menu-col">⋮</td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" /></td>
+            <td class="member-cell">
+              <span class="avatar-badge" style="background:#c9827a">UL</span>
+              <span class="member-name">Umesha Liyanage</span>
+            </td>
+            <td>Premium- 12 mo</td>
+            <td>20 - Apr - 2025</td>
+            <td>20 - Apr - 2026</td>
+            <td><span class="status status-expired">Expired</span></td>
+            <td class="menu-col">⋮</td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" /></td>
+            <td class="member-cell">
+              <span class="avatar-badge" style="background:#e08a2b">NP</span>
+              <span class="member-name">Nadeesha Perera</span>
+            </td>
+            <td>Basic - 1 mo</td>
+            <td>10 - Aug - 2026</td>
+            <td>10 - Sep - 2026</td>
+            <td><span class="status status-warning">Expiring soon</span></td>
+            <td class="menu-col">⋮</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="pagination">
+        <button class="page-nav">‹</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">4</button>
+        <button class="page-btn">5</button>
+        <span class="page-ellipsis">…</span>
+        <button class="page-btn">100</button>
+        <button class="page-nav">›</button>
+          <div class="custom-dropdown custom-dropdown-small" id="perPageDropdown">
+              <button type="button" class="custom-dropdown-trigger">
+                <span class="custom-dropdown-label">20/Page</span>
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+              </button>
+              <ul class="custom-dropdown-options">
+                <li data-value="20" class="selected">20/Page</li>
+                <li data-value="50">50/Page</li>
+                <li data-value="100">100/Page</li>
+              </ul>
+            </div>
+        </div>
+    </section>
+
+  </main>
+
+</div>
+<script src="members-script.js"></script>
+</body>
+</html>
