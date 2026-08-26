@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Create Member Account</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+  <header class="brand">F I T N E S S &nbsp; C E N T E R</header>
+
+  <div class="hero-figure" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+
+  <main class="card">
+    <h1>Create member account</h1>
+
+    <form id="signup-form" novalidate>
+      <p class="section-label">Personal details</p>
+
+      <div class="field">
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+        <span class="error" data-error-for="fullName"></span>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <span class="error" data-error-for="email"></span>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+          <span class="error" data-error-for="phone"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" placeholder="mm/dd/yy" required>
+          <span class="error" data-error-for="dob"></span>
+        </div>
+        <div class="field">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="" selected disabled hidden></option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="non-binary">Non-binary</option>
+            <option value="prefer-not-to-say">Prefer not to say</option>
+          </select>
+          <span class="error" data-error-for="gender"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="address">Home address</label>
+        <input type="text" id="address" name="address" autocomplete="street-address" required>
+        <span class="error" data-error-for="address"></span>
+      </div>
+
+      <fieldset class="plans">
+        <legend>Membership plan</legend>
+        <div class="plan-grid" role="radiogroup" aria-label="Membership plan">
+          <label class="plan-card">
+            <input type="radio" name="plan" value="basic" checked>
+            <span class="plan-name">Basic</span>
+            <span class="plan-price">Rs 3000/mo</span>
+          </label>
+          <label class="plan-card">
+            <input type="radio" name="plan" value="standard">
+            <span class="plan-name">Standard</span>
+            <span class="plan-price">Rs 2,500/mo</span>
+          </label>
+          <label class="plan-card">
+            <input type="radio" name="plan" value="premium">
+            <span class="plan-name">Premium</span>
+            <span class="plan-price">Rs 2,000/mo</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="row generate-row">
+        <button type="button" id="gen-username" class="pill-btn">Generate username</button>
+        <button type="button" id="gen-password" class="pill-btn">Generate Password</button>
+      </div>
+
+      <div class="row credentials-row hidden" id="credentials-row">
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" readonly>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="text" id="password" name="password" readonly>
+        </div>
+      </div>
+
+      <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+
+      <button type="submit" class="cta" id="submit-btn">
+        <span class="cta-label">Create account</span>
+      </button>
+
+      <p class="login-line">Already have an account? <a href="#">Log In</a></p>
+    </form>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
