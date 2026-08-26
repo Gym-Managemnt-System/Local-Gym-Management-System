@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Record Payment</title>
+<link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+  <div class="brand">Fitness Center</div>
+
+  <form class="card" id="paymentForm" novalidate>
+    <h1>Record Payment</h1>
+    <p class="subtitle">Log a payment received in person</p>
+
+    <div class="field">
+      <label for="member">Member</label>
+      <input type="text" id="member" name="member" placeholder="Search member by name or ID" required>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="plan">Plan</label>
+        <select id="plan" name="plan" required>
+          <option value="" selected disabled>Select plan</option>
+          <option value="basic">Basic</option>
+          <option value="standard">Standard</option>
+          <option value="premium">Premium</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="status">Status</label>
+        <select id="status" name="status" required>
+          <option value="" selected disabled>Select status</option>
+          <option value="paid">Paid</option>
+          <option value="partial">Partial</option>
+          <option value="due">Due</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" name="amount" placeholder="Rs 0.00" min="0" step="0.01" required>
+    </div>
+
+    <div class="field">
+      <label>Payment Method</label>
+      <div class="method-group" id="methodGroup">
+        <button type="button" class="method-btn" data-method="bank">
+          <span class="method-icon">🏦</span> Bank
+        </button>
+        <button type="button" class="method-btn" data-method="card">
+          <span class="method-icon">💳</span> Card
+        </button>
+        <button type="button" class="method-btn" data-method="cash">
+          <span class="method-icon">💵</span> Cash
+        </button>
+      </div>
+      <input type="hidden" id="paymentMethod" name="paymentMethod" required>
+    </div>
+
+    <div class="field">
+      <label for="note">Note (Optional)</label>
+      <input type="text" id="note" name="note" placeholder="Add a note">
+    </div>
+
+    <p class="error" id="errorMsg">Please fill in all required fields.</p>
+
+    <div class="actions">
+      <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button>
+      <button type="submit" class="btn-submit">Record Payment</button>
+    </div>
+  </form>
+
+<script src="payment.js"></script>
+</body>
+</html>
