@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Create Trainer Account</title>
+<link rel="stylesheet" href="trainer-signup.css">
+</head>
+<body>
+
+  <div class="brand">Fitness Center</div>
+  <div class="figure" aria-hidden="true"></div>
+
+  <form class="card" id="trainerForm" novalidate>
+    <h1>Create trainer account</h1>
+
+    <p class="section-label">Personal Details</p>
+
+    <div class="field">
+      <label for="fullName">Full name</label>
+      <input type="text" id="fullName" name="fullName" required>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="dob">Date of Birth</label>
+        <input type="text" id="dob" name="dob" placeholder="mm/dd/yy" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+      </div>
+      <div class="field">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+          <option value="" selected disabled hidden></option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+          <option value="prefer-not">Prefer not to say</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="address">Home address</label>
+      <input type="text" id="address" name="address">
+    </div>
+
+    <div class="field">
+      <label>Specialties</label>
+      <div class="chip-group" id="specialtyGroup">
+        <button type="button" class="chip selected" data-value="hiit">HIIT</button>
+        <button type="button" class="chip" data-value="cardio">Cardio</button>
+        <button type="button" class="chip" data-value="strength">Strength</button>
+        <button type="button" class="chip" data-value="yoga">Yoga</button>
+        <button type="button" class="chip" data-value="pilates">Pilates</button>
+      </div>
+    </div>
+
+    <p class="error" id="errorMsg">Please fill in the required fields.</p>
+
+    <div class="actions">
+      <button type="button" class="btn-generate" id="genUsername">Generate username</button>
+      <button type="button" class="btn-generate" id="genPassword">Generate Password</button>
+    </div>
+
+    <div class="generated-box" id="generatedBox" style="display:none;">
+      <p><strong>Username:</strong> <span id="genUsernameValue"></span></p>
+      <p><strong>Password:</strong> <span id="genPasswordValue"></span></p>
+    </div>
+
+    <div class="submit-row">
+      <button type="submit" class="btn-submit">Create Account</button>
+    </div>
+  </form>
+
+<script src="trainer-signup.js"></script>
+</body>
+</html>
