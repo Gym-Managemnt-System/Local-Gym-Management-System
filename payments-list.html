@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Payments</title>
+<link rel="stylesheet" href="payments-list.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">Fitness Center</div>
+
+    <nav class="nav-group">
+      <p class="nav-label">Overview</p>
+      <a href="#" class="nav-item">
+        <span class="icon">▦</span> Dashboard
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">☺</span> Members
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">✓</span> Attendance
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">★</span> Trainers
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">▤</span> Classes
+      </a>
+    </nav>
+
+    <nav class="nav-group">
+      <p class="nav-label">Business</p>
+      <a href="#" class="nav-item active">
+        <span class="icon">▢</span> Payments
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">▥</span> Membership Plans
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">▧</span> Reports
+      </a>
+    </nav>
+
+    <div class="user-card">
+      <div class="avatar">GV</div>
+      <div>
+        <div class="user-name">Greg V.</div>
+        <div class="user-role">Administrator</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+
+    <div class="header-row">
+      <h1 class="page-title">Payments</h1>
+      <button class="btn-record" id="recordBtn">+ Record Payment</button>
+    </div>
+
+    <!-- Stat cards -->
+    <section class="stats">
+      <div class="stat-card">
+        <p class="stat-label">Collected this month</p>
+        <p class="stat-value">Rs 486k</p>
+        <p class="stat-sub up">↑ 8.1%</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">Pending</p>
+        <p class="stat-value">Rs 34k</p>
+        <p class="stat-sub">12 invoices</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">Overdue</p>
+        <p class="stat-value">Rs 11.5k</p>
+        <p class="stat-sub warn">7 members</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">Avg. transaction</p>
+        <p class="stat-value">Rs 6,450</p>
+        <p class="stat-sub">this month</p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search  by member">
+        <span class="search-icon">⌕</span>
+      </div>
+
+      <select class="filter-select" id="statusFilter">
+        <option value="all">All status</option>
+        <option value="paid">Paid</option>
+        <option value="due">Due</option>
+        <option value="overdue">Overdue</option>
+      </select>
+
+      <select class="filter-select" id="methodFilter">
+        <option value="all">All methods</option>
+        <option value="card">Card</option>
+        <option value="bank">Bank Transfer</option>
+        <option value="cash">Cash</option>
+      </select>
+    </section>
+
+    <!-- Payments table panel -->
+    <section class="panel">
+      <table class="payments-table">
+        <thead>
+          <tr>
+            <th class="checkbox-col"><input type="checkbox" id="selectAll"></th>
+            <th>Member</th>
+            <th>Plan</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Method</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="paymentsBody">
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" class="row-check"></td>
+            <td class="member-cell"><span class="avatar-sm avatar-pink">NS</span> Nadeesha Silva</td>
+            <td>Premium - 12 mo</td>
+            <td>Rs 24k</td>
+            <td>18 - Aug - 2026</td>
+            <td>Card</td>
+            <td><span class="status status-paid">Paid</span></td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" class="row-check"></td>
+            <td class="member-cell"><span class="avatar-sm avatar-green">KP</span> Kasun Perera</td>
+            <td>Standard -3 mo</td>
+            <td>Rs 7k</td>
+            <td>25 - Aug - 2026</td>
+            <td>-</td>
+            <td><span class="status status-due">Due in 4 days</span></td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" class="row-check"></td>
+            <td class="member-cell"><span class="avatar-sm avatar-yellow">TW</span> Tharindu Wijayarathna</td>
+            <td>Basic - 1 mo</td>
+            <td>Rs 3.5k</td>
+            <td>9 - Aug - 2026</td>
+            <td>Bank Transfer</td>
+            <td><span class="status status-overdue">Overdue</span></td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" class="row-check"></td>
+            <td class="member-cell"><span class="avatar-sm avatar-orange">JM</span> Jayakodi Mohan</td>
+            <td>Premium - 12 mo</td>
+            <td>Rs. 13.5k</td>
+            <td>3 - Aug - 2026</td>
+            <td>-</td>
+            <td><span class="status status-paid">Paid</span></td>
+          </tr>
+          <tr>
+            <td class="checkbox-col"><input type="checkbox" class="row-check"></td>
+            <td class="member-cell"><span class="avatar-sm avatar-blue">IF</span> Ishara Fernando</td>
+            <td>Premium - 12 mo</td>
+            <td>Rs 15k</td>
+            <td>4 - Jun - 2026</td>
+            <td>Cash</td>
+            <td><span class="status status-paid">Paid</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="table-footer">
+        <div class="pagination">
+          <button class="page-arrow" id="prevPage">‹</button>
+          <button class="page-num active">1</button>
+          <button class="page-num">2</button>
+          <span class="page-dots">…</span>
+          <button class="page-num">5</button>
+          <button class="page-arrow" id="nextPage">›</button>
+          <span class="per-page">5/Page</span>
+        </div>
+
+        <button class="btn-export" id="exportBtn">Export CSV</button>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="payments-list.js"></script>
+</body>
+</html>
