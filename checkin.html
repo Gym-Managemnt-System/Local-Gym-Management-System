@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Manual Check-in</title>
+<link rel="stylesheet" href="checkin.css">
+</head>
+<body>
+
+  <div class="brand">Fitness Center</div>
+
+  <form class="card" id="checkinForm" novalidate>
+    <h1>Manual check-in</h1>
+    <p class="subtitle">For members without a card or app</p>
+
+    <div class="field">
+      <label for="member">Search member</label>
+      <input type="text" id="member" name="member" placeholder="Search by name or ID" required autocomplete="off">
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <div class="field">
+      <label for="checkinTime">Check-in time</label>
+      <input type="time" id="checkinTime" name="checkinTime" required>
+    </div>
+
+    <div class="field">
+      <label for="note">Note (Optional)</label>
+      <input type="text" id="note" name="note" placeholder="Add a note">
+    </div>
+
+    <p class="error" id="errorMsg">Please select a member and check-in time.</p>
+
+    <div class="actions">
+      <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button>
+      <button type="submit" class="btn-confirm">Confirm check-in</button>
+    </div>
+  </form>
+
+<script src="checkin.js"></script>
+</body>
+</html>
