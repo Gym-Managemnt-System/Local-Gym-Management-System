@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Register Member</title>
+<link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+  <div class="brand">Fitness Center</div>
+  <div class="figure" aria-hidden="true"></div>
+
+  <form class="card" id="registerForm" novalidate>
+    <h1>Create member account</h1>
+
+    <div class="section-label">Personal details</div>
+
+    <div class="field">
+      <label for="fullname">Full name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="07X XXX XXXX" required>
+      </div>
+    </div>
+
+    <div class="field-row">
+    <div class="field">
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+    </div>
+    <div class="field">
+      <label for="gender">Gender</label>
+      <div class="custom-select" id="genderSelect">
+        <button type="button" class="custom-select-trigger" id="genderTrigger">
+          <span id="genderValue">Select</span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <ul class="custom-select-options" id="genderOptions">
+          <li data-value="">Select</li>
+          <li data-value="female">Female</li>
+          <li data-value="male">Male</li>
+          <li data-value="other">Other</li>
+        </ul>
+      </div>
+      <input type="hidden" id="gender" name="gender" required>
+    </div>
+  </div>
+
+    <div class="field">
+      <label for="address">Home address</label>
+      <input type="text" id="address" name="address" placeholder="Street, city">
+    </div>
+
+    <div class="section-label">Membership plan</div>
+
+    <div class="plan-row" id="planRow">
+      <button type="button" class="plan-card selected" data-plan="basic" data-price="Rs 3000/mo">
+        <span class="plan-name">Basic</span>
+        <span class="plan-price">Rs 3000/mo</span>
+      </button>
+      <button type="button" class="plan-card" data-plan="standard" data-price="Rs 2500/mo">
+        <span class="plan-name">Standard</span>
+        <span class="plan-price">Rs 2500/mo</span>
+      </button>
+      <button type="button" class="plan-card" data-plan="premium" data-price="Rs 2000/mo">
+        <span class="plan-name">Premium</span>
+        <span class="plan-price">Rs 2000/mo</span>
+      </button>
+    </div>
+    <input type="hidden" id="selectedPlan" name="plan" value="basic">
+
+    <p class="error" id="errorMsg">Please fill in all required fields.</p>
+
+    <div class="gen-row">
+      <button type="button" class="btn-gen" id="genUsername">Generate username</button>
+      <button type="button" class="btn-gen" id="genPassword">Generate Password</button>
+    </div>
+
+    <div class="field">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Auto-generated or type your own">
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Auto-generated or type your own">
+    </div>
+
+    <button type="submit" class="btn-create">Create account</button>
+
+    <p class="signup">Already have an account? <a href="login.html">Log In</a></p>
+  </form>
+
+<script src="register-script.js"></script>
+
+</body>
+</html>

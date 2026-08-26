@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ironclad Fitness Center — Attendance</title>
+<title>Ironclad Fitness Center — Payments</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Asta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="common.css">
-<link rel="stylesheet" href="attendance.css">
+<link rel="stylesheet" href="payments.css">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         Members
       </a>
-      <a href="attendance.html" class="nav-item active">
+      <a href="attendance.html" class="nav-item">
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         Attendance
       </a>
@@ -45,7 +45,7 @@
 
     <nav class="nav-group">
       <div class="nav-label">Business</div>
-      <a href="payments.html" class="nav-item">
+      <a href="payments.html" class="nav-item active">
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
         Payments
       </a>
@@ -72,154 +72,167 @@
 
     <div class="page-header">
       <div>
-        <h1 class="page-title">Attendance</h1>
-        <p class="page-subtitle">Friday, 14 August 2026 | 187 checked-in today</p>
+        <h1 class="page-title">Payments</h1>
       </div>
-      <div class="header-actions">
-        <button class="btn-secondary">Export CSV</button>
-        <a href="checkin.html" class="btn-primary">+ Manual check-in</a>
+      <a href="record-payment.html" class="btn-primary">+ Record Payment</a>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-card-label">Collected this month</div>
+        <div class="stat-card-value">Rs 486k</div>
+        <div class="stat-card-note positive">↑ 8.1%</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Pending</div>
+        <div class="stat-card-value">Rs 34k</div>
+        <div class="stat-card-note">12 invoices</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Overdue</div>
+        <div class="stat-card-value">Rs 11.5k</div>
+        <div class="stat-card-note negative">7 members</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Avg. transaction</div>
+        <div class="stat-card-value">Rs 6,450</div>
+        <div class="stat-card-note">this month</div>
       </div>
     </div>
 
     <div class="filters-row">
       <div class="search-box">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <input type="text" placeholder="Search member to check-in" />
-      </div>
-
-      <div class="custom-dropdown" id="dateDropdown">
-        <button type="button" class="custom-dropdown-trigger">
-          <span class="custom-dropdown-label">Today</span>
-          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <ul class="custom-dropdown-options">
-          <li data-value="today" class="selected">Today</li>
-          <li data-value="yesterday">Yesterday</li>
-          <li data-value="week">This week</li>
-          <li data-value="month">This month</li>
-        </ul>
+        <input type="text" placeholder="Search by member" />
       </div>
 
       <div class="custom-dropdown" id="statusDropdown">
         <button type="button" class="custom-dropdown-trigger">
-          <span class="custom-dropdown-label">All</span>
+          <span class="custom-dropdown-label">All status</span>
           <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
         </button>
         <ul class="custom-dropdown-options">
-          <li data-value="all" class="selected">All</li>
-          <li data-value="checked">Checked in</li>
-          <li data-value="not-checked">Not checked in</li>
+          <li data-value="all" class="selected">All status</li>
+          <li data-value="paid">Paid</li>
+          <li data-value="due">Due</li>
+          <li data-value="overdue">Overdue</li>
+        </ul>
+      </div>
+
+      <div class="custom-dropdown" id="methodDropdown">
+        <button type="button" class="custom-dropdown-trigger">
+          <span class="custom-dropdown-label">All methods</span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <ul class="custom-dropdown-options">
+          <li data-value="all" class="selected">All methods</li>
+          <li data-value="card">Card</li>
+          <li data-value="cash">Cash</li>
+          <li data-value="bank">Bank Transfer</li>
         </ul>
       </div>
     </div>
-    
-        <section class="panel">
-        <div class="table-scroll">
-        <table class="data-table attendance-table">
-            <thead>
+
+    <section class="panel">
+      <div class="table-scroll">
+        <table class="data-table payments-data-table">
+          <thead>
             <tr>
-                <th class="checkbox-col"><input type="checkbox" /></th>
-                <th>Member</th>
-                <th>Plan</th>
-                <th>Check-in time</th>
-                <th>Status</th>
-                <th></th>
+              <th class="checkbox-col"><input type="checkbox" /></th>
+              <th>Member</th>
+              <th>Plan</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Method</th>
+              <th>Status</th>
             </tr>
-            </thead>
-            <tbody>
+          </thead>
+          <tbody>
             <tr>
-                <td class="checkbox-col"><input type="checkbox" /></td>
-                <td class="member-cell">
+              <td class="checkbox-col menu-col">⋮</td>
+              <td class="member-cell">
                 <span class="avatar-badge" style="background:#e3573f">NS</span>
                 <span class="member-name">Nadeesha Silva</span>
-                </td>
-                <td>Premium</td>
-                <td>6:14 AM</td>
-                <td><span class="status status-active">Checked in</span></td>
-                <td class="menu-col">⋮</td>
+              </td>
+              <td>Premium- 12 mo</td>
+              <td>Rs 24k</td>
+              <td>18- Aug-2026</td>
+              <td>Card</td>
+              <td><span class="status status-active">Paid</span></td>
             </tr>
             <tr>
-                <td class="checkbox-col"><input type="checkbox" /></td>
-                <td class="member-cell">
+              <td class="checkbox-col menu-col">⋮</td>
+              <td class="member-cell">
                 <span class="avatar-badge" style="background:#4c8c4a">KP</span>
                 <span class="member-name">Kasun Perera</span>
-                </td>
-                <td>Standard</td>
-                <td>7:02 AM</td>
-                <td><span class="status status-active">Checked in</span></td>
-                <td class="menu-col">⋮</td>
+              </td>
+              <td>Standard -3 mo</td>
+              <td>Rs 7k</td>
+              <td>25- Aug-2026</td>
+              <td>-</td>
+              <td><span class="status status-warning">Due in 4 days</span></td>
             </tr>
             <tr>
-                <td class="checkbox-col"><input type="checkbox" /></td>
-                <td class="member-cell">
+              <td class="checkbox-col menu-col">⋮</td>
+              <td class="member-cell">
                 <span class="avatar-badge" style="background:#c9a227">TW</span>
                 <span class="member-name">Tharindu Wijayarathna</span>
-                </td>
-                <td>Basic</td>
-                <td>—</td>
-                <td><span class="status status-warning">Not checked in</span></td>
-                <td class="menu-col">⋮</td>
+              </td>
+              <td>Basic- 1 mo</td>
+              <td>Rs 3.5k</td>
+              <td>9- Aug-2026</td>
+              <td>Bank Transfer</td>
+              <td><span class="status status-expired">Overdue</span></td>
             </tr>
             <tr>
-                <td class="checkbox-col"><input type="checkbox" /></td>
-                <td class="member-cell">
+              <td class="checkbox-col menu-col">⋮</td>
+              <td class="member-cell">
                 <span class="avatar-badge" style="background:#e08a2b">JM</span>
                 <span class="member-name">Jayakodi Mohan</span>
-                </td>
-                <td>Premium</td>
-                <td>5:47 PM</td>
-                <td><span class="status status-active">Checked in</span></td>
-                <td class="menu-col">⋮</td>
+              </td>
+              <td>Premium- 12 mo</td>
+              <td>Rs. 13.5k</td>
+              <td>3- Aug-2026</td>
+              <td>-</td>
+              <td><span class="status status-active">Paid</span></td>
             </tr>
             <tr>
-                <td class="checkbox-col"><input type="checkbox" /></td>
-                <td class="member-cell">
+              <td class="checkbox-col menu-col">⋮</td>
+              <td class="member-cell">
                 <span class="avatar-badge" style="background:#8a5fd6">IF</span>
                 <span class="member-name">Ishara Fernando</span>
-                </td>
-                <td>Premium</td>
-                <td>—</td>
-                <td><span class="status status-warning">Not checked in</span></td>
-                <td class="menu-col">⋮</td>
+              </td>
+              <td>Premium- 12 mo</td>
+              <td>Rs 15k</td>
+              <td>4- Jun-2026</td>
+              <td>Cash</td>
+              <td><span class="status status-active">Paid</span></td>
             </tr>
-            <tr>
-                <td class="checkbox-col"><input type="checkbox" /></td>
-                <td class="member-cell">
-                <span class="avatar-badge" style="background:#4c8c4a">CD</span>
-                <span class="member-name">Chamara Dias</span>
-                </td>
-                <td>Standard</td>
-                <td>—</td>
-                <td><span class="status status-warning">Not checked in</span></td>
-                <td class="menu-col">⋮</td>
-            </tr>
-            </tbody>
-        
-      </table>
-    </div>
+          </tbody>
+        </table>
+      </div>
 
       <div class="pagination">
         <button class="page-nav">‹</button>
         <button class="page-btn active">1</button>
         <button class="page-btn">2</button>
-        <button class="page-btn">3</button>
-        <button class="page-btn">4</button>
-        <button class="page-btn">5</button>
         <span class="page-ellipsis">…</span>
-        <button class="page-btn">10</button>
+        <button class="page-btn">5</button>
         <button class="page-nav">›</button>
 
         <div class="custom-dropdown custom-dropdown-small" id="perPageDropdown">
           <button type="button" class="custom-dropdown-trigger">
-            <span class="custom-dropdown-label">20/Page</span>
+            <span class="custom-dropdown-label">5/Page</span>
             <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
           </button>
           <ul class="custom-dropdown-options">
-            <li data-value="20" class="selected">20/Page</li>
-            <li data-value="50">50/Page</li>
-            <li data-value="100">100/Page</li>
+            <li data-value="5" class="selected">5/Page</li>
+            <li data-value="10">10/Page</li>
+            <li data-value="20">20/Page</li>
           </ul>
         </div>
+
+        <button class="btn-primary export-btn">Export CSV</button>
       </div>
     </section>
 
@@ -227,6 +240,6 @@
 
 </div>
 
-<script src="attendance-script.js"></script>
+<script src="payments-script.js"></script>
 </body>
 </html>

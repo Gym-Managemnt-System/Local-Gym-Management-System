@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ironclad Fitness Center — Reports</title>
+<title>Ironclad Fitness Center — Membership Plans</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Asta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="common.css">
-<link rel="stylesheet" href="reports.css">
+<link rel="stylesheet" href="membership-plans.css">
 </head>
 <body>
 
@@ -49,11 +49,11 @@
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
         Payments
       </a>
-      <a href="membership-plans.html" class="nav-item">
+      <a href="membership-plans.html" class="nav-item active">
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
         Membership Plans
       </a>
-      <a href="reports.html" class="nav-item active">
+      <a href="reports.html" class="nav-item">
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5z"/><polyline points="14 2 14 8 20 8"/></svg>
         Reports
       </a>
@@ -72,105 +72,79 @@
 
     <div class="page-header">
       <div>
-        <h1 class="page-title">Reports</h1>
+        <h1 class="page-title">Membership Plans</h1>
+        <p class="page-subtitle">3 active plans | 584 members enrolled</p>
       </div>
     </div>
 
-    <div class="report-type-row">
-      <button type="button" class="report-type-pill active" data-report="growth">
-        <span class="report-type-title">Membership growth</span>
-        <span class="report-type-sub">New sign-up vs cancelations</span>
-      </button>
-      <button type="button" class="report-type-pill" data-report="revenue">
-        <span class="report-type-title">Revenue Summary</span>
-        <span class="report-type-sub">Plan, month & payment method</span>
-      </button>
-      <button type="button" class="report-type-pill" data-report="attendance">
-        <span class="report-type-title">Attendance Trends</span>
-        <span class="report-type-sub">Peak hours & weekly patterns</span>
-      </button>
-      <button type="button" class="report-type-pill" data-report="trainer">
-        <span class="report-type-title">Trainer performance</span>
-        <span class="report-type-sub">Load, rating & retention</span>
-      </button>
-    </div>
+    <section class="panel plans-panel">
+      <div class="plans-grid">
 
-    <section class="panel chart-panel">
-      <div class="panel-header-row">
-        <h2 class="panel-heading">Revenue | Last 6 months</h2>
-        <a href="#" class="export-link" id="exportPdf">Export PDF</a>
+        <div class="plan-card">
+          <div class="plan-tier">Basic</div>
+          <div class="plan-price">Rs 3,000<span>/mo</span></div>
+          <div class="plan-billing">Billed monthly | no lock-in</div>
+
+          <ul class="plan-features">
+            <li>Gym floor access</li>
+            <li>Locker access</li>
+            <li>2 group classes / week</li>
+          </ul>
+
+          <div class="plan-enrolled">112 members enrolled</div>
+
+          <div class="plan-actions">
+            <button type="button" class="btn-edit">Edit</button>
+            <button type="button" class="btn-archive">Archive</button>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <span class="plan-badge">Most popular</span>
+          <div class="plan-tier">Standard</div>
+          <div class="plan-price">Rs 2,500<span>/mo</span></div>
+          <div class="plan-billing">Billed every 3 months</div>
+
+          <ul class="plan-features">
+            <li>Everything in Basic</li>
+            <li>Unlimited group classes</li>
+            <li>1 PT session / month</li>
+          </ul>
+
+          <div class="plan-enrolled">300 members enrolled</div>
+
+          <div class="plan-actions">
+            <button type="button" class="btn-edit">Edit</button>
+            <button type="button" class="btn-archive">Archive</button>
+          </div>
+        </div>
+
+        <div class="plan-card plan-card-centered">
+          <div class="plan-tier">Premium</div>
+          <div class="plan-price">Rs 2,000<span>/mo</span></div>
+          <div class="plan-billing">Billed annually</div>
+
+          <ul class="plan-features">
+            <li>Everything in Standard</li>
+            <li>Unlimited PT sessions</li>
+            <li>Priority class booking</li>
+          </ul>
+
+          <div class="plan-enrolled">172 members enrolled</div>
+
+          <div class="plan-actions">
+            <button type="button" class="btn-edit">Edit</button>
+            <button type="button" class="btn-archive">Archive</button>
+          </div>
+        </div>
+
       </div>
-
-      <div class="bar-chart">
-        <div class="bar-col">
-          <div class="bar" style="height:52%"></div>
-          <div class="bar-label">Mar</div>
-        </div>
-        <div class="bar-col">
-          <div class="bar" style="height:58%"></div>
-          <div class="bar-label">Apr</div>
-        </div>
-        <div class="bar-col">
-          <div class="bar" style="height:74%"></div>
-          <div class="bar-label">May</div>
-        </div>
-        <div class="bar-col">
-          <div class="bar" style="height:48%"></div>
-          <div class="bar-label">Jun</div>
-        </div>
-        <div class="bar-col">
-          <div class="bar" style="height:90%"></div>
-          <div class="bar-label">Jul</div>
-        </div>
-        <div class="bar-col">
-          <div class="bar" style="height:100%"></div>
-          <div class="bar-label">Aug</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel">
-      <div class="panel-header-row">
-        <h2 class="panel-heading">Revenue | Last 6 months</h2>
-        <a href="#" class="export-link" id="exportCsv">Export CSV</a>
-      </div>
-
-      <table class="data-table reports-data-table">
-        <thead>
-          <tr>
-            <th>Plan</th>
-            <th>Members</th>
-            <th>Monthly Revenue</th>
-            <th class="align-right">Share</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="plan-name">Standard</td>
-            <td>300</td>
-            <td>Rs 171,750</td>
-            <td class="align-right">53%</td>
-          </tr>
-          <tr>
-            <td class="plan-name">Basic</td>
-            <td>112</td>
-            <td>Rs 93,600</td>
-            <td class="align-right">24%</td>
-          </tr>
-          <tr>
-            <td class="plan-name">Premium</td>
-            <td>172</td>
-            <td>Rs 57,000</td>
-            <td class="align-right">22%</td>
-          </tr>
-        </tbody>
-      </table>
     </section>
 
   </main>
 
 </div>
 
-<script src="reports-script.js"></script>
+<script src="membership-plans-script.js"></script>
 </body>
 </html>

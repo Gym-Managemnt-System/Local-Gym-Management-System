@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Login</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="brand">Fitness Center</div>
+  <div class="figure" aria-hidden="true"></div>
+
+  <!-- LOGIN FORM VIEW -->
+  <div class="form-panel" id="login-view">
+    <div class="form-card">
+      <h2>Welcome back!</h2>
+      <!-- <p class="lead">Log in to keep your streak going.</p> -->
+      <div class="form-error" id="login-error">Enter a valid email and password.</div>
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email"  />
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password"  minlength="10" />
+        </div>
+        <div class="remember-row">
+          <div class="remember">
+            <input type="checkbox" id="login-remember" />
+            <label for="login-remember">Remember me</label>
+          </div>
+          <a href="#" class="forgot-link" id="forgotLink">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn-submit">Log In</button>
+      </form>
+      <div class="switch-line">
+        Don't have an account? <button id="switch-to-signup">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIGN UP FORM VIEW -->
+  <div class="form-panel" id="signup-view">
+    <div class="form-card">
+      <h2>Join Ironclad</h2>
+      <p class="lead">Create your account and start tracking today.</p>
+      <div class="form-error" id="signup-error">Please fill in all fields correctly.</div>
+      <form id="signup-form" novalidate>
+        <div class="field">
+          <label for="signup-name">Full name</label>
+          <input type="text" id="signup-name" placeholder="Jane Doe" required />
+        </div>
+        <div class="field">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" placeholder="you@example.com" required />
+        </div>
+        <div class="field">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="At least 6 characters" required minlength="6" />
+        </div>
+        <button type="submit" class="btn-submit">Create Account</button>
+      </form>
+      <div class="switch-line">
+        Already have an account? <button id="switch-to-login">Log In</button>
+      </div>
+    </div>
+  </div>
+
+  <a class="back-btn" href="front.html">← Back</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
