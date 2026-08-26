@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Membership Plans</title>
+<link rel="stylesheet" href="plans.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">Fitness Center</div>
+
+    <nav class="nav-group">
+      <p class="nav-label">Overview</p>
+      <a href="#" class="nav-item">
+        <span class="icon">▦</span> Dashboard
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">☺</span> Members
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">✓</span> Attendance
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">★</span> Trainers
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">▤</span> Classes
+      </a>
+    </nav>
+
+    <nav class="nav-group">
+      <p class="nav-label">Business</p>
+      <a href="#" class="nav-item">
+        <span class="icon">▢</span> Payments
+      </a>
+      <a href="#" class="nav-item active">
+        <span class="icon">▥</span> Membership Plans
+      </a>
+      <a href="#" class="nav-item">
+        <span class="icon">▧</span> Reports
+      </a>
+    </nav>
+
+    <div class="user-card">
+      <div class="avatar">GV</div>
+      <div>
+        <div class="user-name">Greg V.</div>
+        <div class="user-role">Administrator</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+    <h1 class="page-title">Membership Plans</h1>
+    <p class="page-sub">3 active plans | 584 members enrolled</p>
+
+    <section class="plans-panel">
+      <div class="plans-row">
+
+        <!-- Basic -->
+        <div class="plan-card">
+          <p class="plan-name">Basic</p>
+          <p class="plan-price">Rs 3,000<span>/mo</span></p>
+          <p class="plan-billing">Billed monthly | no lock-in</p>
+
+          <ul class="plan-features">
+            <li>Gym floor access</li>
+            <li>Locker access</li>
+            <li>2 group classes / week</li>
+          </ul>
+
+          <p class="plan-enrolled">112 members enrolled</p>
+
+          <div class="plan-actions">
+            <button class="btn-edit" data-plan="basic">Edit</button>
+            <button class="btn-archive" data-plan="basic">Archive</button>
+          </div>
+        </div>
+
+        <!-- Standard -->
+        <div class="plan-card featured">
+          <span class="badge">Most popular</span>
+          <p class="plan-name">Standard</p>
+          <p class="plan-price">Rs 2,500<span>/mo</span></p>
+          <p class="plan-billing">Billed every 3 months</p>
+
+          <ul class="plan-features">
+            <li>Everything in Basic</li>
+            <li>Unlimited group classes</li>
+            <li>1 PT session / month</li>
+          </ul>
+
+          <p class="plan-enrolled">300 members enrolled</p>
+
+          <div class="plan-actions">
+            <button class="btn-edit" data-plan="standard">Edit</button>
+            <button class="btn-archive" data-plan="standard">Archive</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="plans-row plans-row-center">
+
+        <!-- Premium -->
+        <div class="plan-card">
+          <p class="plan-name">Premium</p>
+          <p class="plan-price">Rs 2,000<span>/mo</span></p>
+          <p class="plan-billing">Billed annually</p>
+
+          <ul class="plan-features">
+            <li>Everything in Standard</li>
+            <li>Unlimited PT sessions</li>
+            <li>Priority class booking</li>
+          </ul>
+
+          <p class="plan-enrolled">172 members enrolled</p>
+
+          <div class="plan-actions">
+            <button class="btn-edit" data-plan="premium">Edit</button>
+            <button class="btn-archive" data-plan="premium">Archive</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="plans.js"></script>
+</body>
+</html>
