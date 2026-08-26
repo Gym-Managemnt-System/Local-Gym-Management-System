@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No membership linked — Fitness Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="landing-shell">
+      <div class="landing-glow"></div>
+      <img src="assets/hero-athlete.png" alt="" class="landing-hero-img" />
+      <div class="landing-brand-sub landing-corner-brand">Fitness Center</div>
+
+      <div class="auth-panel-wrap">
+        <div class="auth-panel">
+          <h2 class="auth-panel-title" id="title">Almost there</h2>
+          <p class="field-hint" style="margin-bottom: 24px; text-align: center">
+            Your account is set up, but no membership is linked to it yet. Visit the front desk to
+            get your plan set up — once they've added it, tap refresh below.
+          </p>
+
+          <button class="btn btn-accent full" id="refresh-btn">Refresh</button>
+
+          <p class="landing-signup" style="margin-top: 18px">
+            Wrong account? <button type="button" class="link-accent" id="logout-link">Log out</button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/pages/no-membership.js"></script>
+  </body>
+</html>
