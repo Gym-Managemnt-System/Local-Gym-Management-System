@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ironclad Fitness Center — Members</title>
+<title>RESET Fitness Center — Members</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,6 +65,9 @@
         <div class="admin-name">Greg V.</div>
         <div class="admin-role">Administrator</div>
       </div>
+      <button id="logoutBtn" class="logout-btn" aria-label="Log out">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
     </div>
   </aside>
 
@@ -73,42 +76,56 @@
     <div class="page-header">
       <div>
         <h1 class="page-title">Members</h1>
-        <p class="page-subtitle">584 total | 23 expiring within 7 days</p>
+        <p class="page-subtitle" id="membersSubtitle">Loading members...</p>
       </div>
       <a href="register.html" class="btn-primary">+ Register member</a>
     </div>
 
     <div class="filters-row">
-      <div class="search-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <input type="text" placeholder="Search by name" />
-      </div>
-      <div class="custom-dropdown" id="planDropdown">
-  <button type="button" class="custom-dropdown-trigger">
-    <span class="custom-dropdown-label">All plans</span>
-    <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
-  </button>
-  <ul class="custom-dropdown-options">
-    <li data-value="all" class="selected">All plans</li>
-    <li data-value="premium">Premium</li>
-    <li data-value="standard">Standard</li>
-    <li data-value="basic">Basic</li>
-  </ul>
-</div>
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input type="text" id="searchInput" placeholder="Search by name" autocomplete="off" />
+    <div class="search-suggestions" id="searchSuggestions"></div>
+  </div>
+  <div class="custom-dropdown" id="planDropdown">
+    <button type="button" class="custom-dropdown-trigger">
+      <span class="custom-dropdown-label">All plans</span>
+      <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <ul class="custom-dropdown-options">
+      <li data-value="all" class="selected">All plans</li>
+      <li data-value="premium">Premium</li>
+      <li data-value="standard">Standard</li>
+      <li data-value="basic">Basic</li>
+    </ul>
+  </div>
 
-<div class="custom-dropdown" id="statusDropdown">
-  <button type="button" class="custom-dropdown-trigger">
-    <span class="custom-dropdown-label">All status</span>
-    <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
-  </button>
-  <ul class="custom-dropdown-options">
-    <li data-value="all" class="selected">All status</li>
-    <li data-value="active">Active</li>
-    <li data-value="expiring">Expiring soon</li>
-    <li data-value="expired">Expired</li>
-  </ul>
+  <div class="custom-dropdown" id="statusDropdown">
+    <button type="button" class="custom-dropdown-trigger">
+      <span class="custom-dropdown-label">All status</span>
+      <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <ul class="custom-dropdown-options">
+      <li data-value="all" class="selected">All status</li>
+      <li data-value="active">Active</li>
+      <li data-value="expiring">Expiring soon</li>
+      <li data-value="expired">Expired</li>
+    </ul>
+  </div>
+
+  <div class="custom-dropdown" id="sortDropdown">
+    <button type="button" class="custom-dropdown-trigger">
+      <span class="custom-dropdown-label">Sort: Name A-Z</span>
+      <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <ul class="custom-dropdown-options">
+      <li data-value="name-asc" class="selected">Name A-Z</li>
+      <li data-value="name-desc">Name Z-A</li>
+      <li data-value="joined-newest">Newest joined</li>
+      <li data-value="joined-oldest">Oldest joined</li>
+    </ul>
+  </div>
 </div>
-    </div>
 
     <section class="panel">
     <div class="table-scroll">
@@ -124,103 +141,8 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td class="checkbox-col"><input type="checkbox" /></td>
-            <td class="member-cell">
-              <span class="avatar-badge" style="background:#e3573f">NS</span>
-              <span class="member-name">Nadeesha Silva</span>
-            </td>
-            <td>Premium - 12 mo</td>
-            <td>1 - Aug - 2026</td>
-            <td>1 - Aug - 2027</td>
-            <td><span class="status status-active">Active</span></td>
-            <td class="menu-col">⋮</td>
-          </tr>
-          <tr>
-            <td class="checkbox-col"><input type="checkbox" /></td>
-            <td class="member-cell">
-              <span class="avatar-badge" style="background:#4c8c4a">KP</span>
-              <span class="member-name">Kasun Perera</span>
-            </td>
-            <td>Standard -3 mo</td>
-            <td>23 - Jun - 2026</td>
-            <td>23 - Aug - 2026</td>
-            <td><span class="status status-warning">Expiring soon</span></td>
-            <td class="menu-col">⋮</td>
-          </tr>
-          <tr>
-            <td class="checkbox-col"><input type="checkbox" /></td>
-            <td class="member-cell">
-              <span class="avatar-badge" style="background:#c9a227">TW</span>
-              <span class="member-name">Tharindu Wijayarathna</span>
-            </td>
-            <td>Basic- 1 mo</td>
-            <td>4 - Jul - 2026</td>
-            <td>4 - Aug - 2026</td>
-            <td><span class="status status-expired">Expired</span></td>
-            <td class="menu-col">⋮</td>
-          </tr>
-          <tr>
-            <td class="checkbox-col"><input type="checkbox" /></td>
-            <td class="member-cell">
-              <span class="avatar-badge" style="background:#e08a2b">JM</span>
-              <span class="member-name">Jayakodi Mohan</span>
-            </td>
-            <td>Premium- 12 mo</td>
-            <td>3 - Jun - 2026</td>
-            <td>3 - Jun - 2027</td>
-            <td><span class="status status-active">Active</span></td>
-            <td class="menu-col">⋮</td>
-          </tr>
-          <tr>
-            <td class="checkbox-col"><input type="checkbox" /></td>
-            <td class="member-cell">
-              <span class="avatar-badge" style="background:#8a5fd6">IF</span>
-              <span class="member-name">Ishara Fernando</span>
-            </td>
-            <td>Premium- 12 mo</td>
-            <td>29 - May - 2026</td>
-            <td>29 - May - 2027</td>
-            <td><span class="status status-active">Active</span></td>
-            <td class="menu-col">⋮</td>
-          </tr>
-          <tr>
-            <td class="checkbox-col"><input type="checkbox" /></td>
-            <td class="member-cell">
-              <span class="avatar-badge" style="background:#4c8c4a">CD</span>
-              <span class="member-name">Chamara Dias</span>
-            </td>
-            <td>Standard - 3mo</td>
-            <td>15 - Jul - 2026</td>
-            <td>15 - Sep - 2026</td>
-            <td><span class="status status-active">Active</span></td>
-            <td class="menu-col">⋮</td>
-          </tr>
-          <tr>
-            <td class="checkbox-col"><input type="checkbox" /></td>
-            <td class="member-cell">
-              <span class="avatar-badge" style="background:#c9827a">UL</span>
-              <span class="member-name">Umesha Liyanage</span>
-            </td>
-            <td>Premium- 12 mo</td>
-            <td>20 - Apr - 2025</td>
-            <td>20 - Apr - 2026</td>
-            <td><span class="status status-expired">Expired</span></td>
-            <td class="menu-col">⋮</td>
-          </tr>
-          <tr>
-            <td class="checkbox-col"><input type="checkbox" /></td>
-            <td class="member-cell">
-              <span class="avatar-badge" style="background:#e08a2b">NP</span>
-              <span class="member-name">Nadeesha Perera</span>
-            </td>
-            <td>Basic - 1 mo</td>
-            <td>10 - Aug - 2026</td>
-            <td>10 - Sep - 2026</td>
-            <td><span class="status status-warning">Expiring soon</span></td>
-            <td class="menu-col">⋮</td>
-          </tr>
+        <tbody id="membersTableBody">
+          <!-- Rows are inserted dynamically by members-script.js -->
         </tbody>
       </table>
       </div>
@@ -253,5 +175,6 @@
 
 </div>
 <script src="members-script.js"></script>
+<script src="logout.js"></script>
 </body>
 </html>

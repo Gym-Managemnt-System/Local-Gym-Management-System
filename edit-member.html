@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Edit Member</title>
+<link rel="stylesheet" href="checkin.css">
+</head>
+<body>
+
+  <div class="brand">Fitness Center</div>
+
+  <form class="card" id="editMemberForm" novalidate>
+    <h1>Edit membership</h1>
+    <p class="lead" id="editMemberName">Loading...</p>
+
+    <div class="field">
+      <label>Plan</label>
+      <div class="custom-dropdown" id="planDropdownEdit">
+        <button type="button" class="custom-dropdown-trigger">
+          <span class="custom-dropdown-label">Basic</span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <ul class="custom-dropdown-options">
+          <li data-value="basic" class="selected">Basic</li>
+          <li data-value="standard">Standard</li>
+          <li data-value="premium">Premium</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="editStart">Membership start</label>
+      <input type="date" id="editStart" required>
+    </div>
+
+    <div class="field">
+      <label for="editEnd">Membership end</label>
+      <input type="date" id="editEnd" required>
+    </div>
+
+    <div class="field">
+      <label>Status</label>
+      <div class="custom-dropdown" id="statusDropdownEdit">
+        <button type="button" class="custom-dropdown-trigger">
+          <span class="custom-dropdown-label">Active</span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <ul class="custom-dropdown-options">
+          <li data-value="active" class="selected">Active</li>
+          <li data-value="expired">Expired</li>
+          <li data-value="deactivated">Deactivated</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="error" id="errorMsg"></p>
+
+    <div class="btn-row">
+      <a href="members.html" class="btn-cancel">Cancel</a>
+      <button type="submit" class="btn-confirm">Save changes</button>
+    </div>
+  </form>
+
+<script src="edit-member-script.js"></script>
+
+</body>
+</html>
