@@ -11,7 +11,7 @@ This repository contains the **backend API** for the system. It replaces manual 
 | N.A.S.Prasadika | D/BSE/24/0016 | Product Owner |
 | T.H.N. Dewindi | D/BSE/24/0025 | Scrum Master |
 | B.A.S.A. Wijayasekara | D/BSE/24/0026 | UI/UX Designer |
-| B.N.R.Fernando | BSE6881| Backend Developer |
+| B.N.R.Fernando | BSE/6881| Backend Developer |
 
 ## Tech Stack
 
@@ -19,7 +19,7 @@ This repository contains the **backend API** for the system. It replaces manual 
 - **Database:** MySQL (via `mysql2`)
 - **Auth:** JWT + bcrypt (role-based access: admin / member / trainer)
 - **PDF Export:** pdfkit (for the Membership Transfer Report)
-- **Frontend:** plain HTML-CSS-JS
+- **Frontend:**HTML-CSS-JS
 
 ## Project Structure
 
