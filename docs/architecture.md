@@ -84,3 +84,60 @@ sequenceDiagram
     API-->>Frontend: Stream PDF file
     Frontend-->>Member: Download transfer-report.pdf
 ```
+
+
+Use Case Diagram
+
+```mermaid
+flowchart LR
+    Member([Member])
+    Trainer([Trainer])
+    Admin([Admin/Staff])
+
+    subgraph System[Gym Management System]
+        UC1([Register/Login])
+        UC2([View Membership Plans])
+        UC3([Subscribe/Renew Membership])
+        UC4([Make Payment])
+        UC5([View Payment History])
+        UC6([Enroll in Class])
+        UC7([Check In - Attendance])
+        UC8([Export Transfer Report])
+        UC9([View Class Schedule])
+        UC10([Manage Class Roster])
+        UC11([Mark Member Attendance])
+        UC12([Manage Members])
+        UC13([Manage Trainers])
+        UC14([Manage Membership Plans])
+        UC15([Manage Classes])
+        UC16([Process/Verify Payments])
+        UC17([View System Reports])
+    end
+
+    Member --> UC1
+    Member --> UC2
+    Member --> UC3
+    Member --> UC4
+    Member --> UC5
+    Member --> UC6
+    Member --> UC7
+    Member --> UC8
+
+    Trainer --> UC1
+    Trainer --> UC9
+    Trainer --> UC10
+    Trainer --> UC11
+
+    Admin --> UC1
+    Admin --> UC12
+    Admin --> UC13
+    Admin --> UC14
+    Admin --> UC15
+    Admin --> UC16
+    Admin --> UC17
+
+    UC3 -.-> UC4
+    UC8 -.-> UC7
+    UC8 -.-> UC5
+    UC8 -.-> UC6
+```
