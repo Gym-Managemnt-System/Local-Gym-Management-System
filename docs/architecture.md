@@ -141,3 +141,50 @@ flowchart LR
     UC8 -.-> UC5
     UC8 -.-> UC6
 ```
+Architecture Diagram
+
+
+```mermaid
+flowchart TB
+    subgraph Client["Client Layer"]
+        Web[Web App / Browser]
+        Mobile[Mobile App]
+    end
+
+    subgraph Frontend["Frontend"]
+        UI[React / Frontend App]
+    end
+
+    subgraph Backend["Backend API Server"]
+        Auth[Auth Middleware - JWT]
+        API[REST API Controllers]
+        Service[Business Logic / Services]
+        PDF[PDF Generator - pdfkit]
+    end
+
+    subgraph Data["Data Layer"]
+        DB[(MySQL Database)]
+        Cache[(Cache / Session Store - optional)]
+    end
+
+    subgraph External["External Concerns"]
+        Storage[File/Report Storage]
+        Mail[Email Service - notifications]
+    end
+
+    Web --> UI
+    Mobile --> UI
+    UI -->|HTTPS Requests| API
+    API --> Auth
+    Auth -->|Validates Token| API
+    API --> Service
+    Service --> DB
+    Service --> Cache
+    Service --> PDF
+    PDF --> Storage
+    Service --> Mail
+
+    DB -->|Query Results| Service
+    Service -->|JSON/Response| API
+    API -->|Response| UI
+```
