@@ -32,7 +32,7 @@ This document tracks the prioritized Epics and User Stories for the Local Gym Ma
 
 | Issue ID | Title | Priority | Status | Link |
 | :--- | :--- | :--- | :--- | :--- |
-| #3 | Gym Membership Plan Selection | P2 | Backlog | [Issue #3](../../issues/3) |
+| #3 | Gym Membership Plan Selection | P2 | In-Progress | [Issue #3](../../issues/3) |
 | #4 | Daily Gym Attendance Logging | P2 | Backlog | [Issue #4](../../issues/4) |
 | #5 | Assign Workout Plans to Members | P3 | Backlog | [Issue #5](../../issues/5) |
 | #6 | Fee Payment Tracking | P3 | Backlog | [Issue #6](../../issues/6) |
