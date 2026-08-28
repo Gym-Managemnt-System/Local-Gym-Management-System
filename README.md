@@ -8,10 +8,10 @@ This repository contains the **backend API** for the system. It replaces manual 
 
 | Name | Student ID | Role |
 |---|---|---|
-| P.H.M.L.C.B. Abeyrathne | D/BSE/24/0018 | Product Owner |
-| U.D. Rajeewa | D/BSE/24/0009 | Scrum Master |
-| J.A.H.S. Jayasooriya | D/BSE/24/0012 | UI/UX Designer |
-| Behan Ravishka | D/BSE/24/0022 | Backend Developer |
+| N.A.S.Prasadika | D/BSE/24/0016 | Product Owner |
+| T.H.N. Dewindi | D/BSE/24/0025 | Scrum Master |
+| B.A.S.A. Wijayasekara | D/BSE/24/0026 | UI/UX Designer |
+| B.N.R.Fernando | BSE6881| Backend Developer |
 
 ## Tech Stack
 
@@ -19,7 +19,7 @@ This repository contains the **backend API** for the system. It replaces manual 
 - **Database:** MySQL (via `mysql2`)
 - **Auth:** JWT + bcrypt (role-based access: admin / member / trainer)
 - **PDF Export:** pdfkit (for the Membership Transfer Report)
-- **Frontend:** _add your team's choice here (React / plain HTML-CSS-JS / etc.)_
+- **Frontend:** plain HTML-CSS-JS / etc.)_
 
 ## Project Structure
 
