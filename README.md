@@ -19,7 +19,7 @@ This repository contains the **backend API** for the system. It replaces manual 
 - **Database:** MySQL (via `mysql2`)
 - **Auth:** JWT + bcrypt (role-based access: admin / member / trainer)
 - **PDF Export:** pdfkit (for the Membership Transfer Report)
-- **Frontend:** plain HTML-CSS-JS / etc.)_
+- **Frontend:** plain HTML-CSS-JS
 
 ## Project Structure
 
