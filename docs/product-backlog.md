@@ -23,7 +23,7 @@ This document tracks the prioritized Epics and User Stories for the Local Gym Ma
 
 | Issue ID | Title | Priority | Status | Link |
 | :--- | :--- | :--- | :--- | :--- |
-| #8 | Administrator Member Registration and Management | P1 | In Progress | [Issue #8](../../issues/8) |
+| #8 | Administrator Member Registration and Management | P1 | Completed | [Issue #8](../../issues/8) |
 
 ---
 
