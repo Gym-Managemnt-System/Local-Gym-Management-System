@@ -19,7 +19,7 @@ This document tracks the prioritized Epics and User Stories for the Local Gym Ma
 
 ## Sprint 2: Core Development & MVP (Current Sprint)
 * Goal: Build core administrative user management and backend structure for Mid-Project Review.
-* Status: **In Progress**
+* Status: **Completed**
 
 | Issue ID | Title | Priority | Status | Link |
 | :--- | :--- | :--- | :--- | :--- |
