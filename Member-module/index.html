@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Center — Member Portal</title>
+    <meta name="description" content="Track workouts, book classes and manage your gym membership." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="landing-shell">
+      <div class="landing-glow"></div>
+      <img src="assets/hero-athlete.png" alt="" class="landing-hero-img" />
+
+      <div class="landing-content">
+        <div class="landing-brand">
+          <div class="landing-logo">LOGO HERE</div>
+          <div class="landing-brand-sub">Fitness Center</div>
+        </div>
+
+        <h1 class="landing-headline">Discipline. Power. Progress.</h1>
+        <p class="landing-tagline">
+          Track your workouts, book classes, and manage your membership — all from one place built
+          for people who never skip a session.
+        </p>
+
+        <div class="landing-cta">
+          <p>Login here to get started</p>
+          <a href="login.html" class="btn btn-accent full landing-login-btn">Log In</a>
+          <p class="landing-signup">Don't have an account? <a href="register.html">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+      // Already signed in? Go straight to the dashboard.
+      if (window.Auth.isAuthenticated()) window.location.replace('dashboard.html');
+    </script>
+  </body>
+</html>

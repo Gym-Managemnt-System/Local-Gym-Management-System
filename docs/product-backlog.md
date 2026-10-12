@@ -11,27 +11,28 @@ This document tracks the prioritized Epics and User Stories for the Local Gym Ma
 
 | Issue ID | Title | Priority | Status | Link |
 | :--- | :--- | :--- | :--- | :--- |
-| #1 | Finalize Project Topic and System Scope | P1 | Completed | [Issue #1](../../issues/1) |
-| #7 | Initial Repository Structure & Base Setup | P1 | Completed | [Issue #7](../../issues/7) |
+| #1 | Finalize Project Topic and System Scope | P1 | Completed | [Issue #1](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/1) |
+| #2 | User Registration and Login System | P1 | Completed | [Issue #2](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/2) |
+| #7 | Initial Repository Structure & Base Setup | P1 | Completed | [Issue #7](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/7) |
 
 ---
 
 ## Sprint 2: Core Development & MVP (Current Sprint)
-* Goal: Build core user authentication and membership viewing functionality for Mid-Project Review.
-* Status: **In Progress**
+* Goal: Build core administrative user management and backend structure for Mid-Project Review.
+* Status: **Completed**
 
 | Issue ID | Title | Priority | Status | Link |
 | :--- | :--- | :--- | :--- | :--- |
-| #2 | User Registration and Login System | P1 | In Progress | [Issue #2](../../issues/2) |
-| #3 | Gym Membership Plan Selection | P2 | Ready | [Issue #3](../../issues/3) |
+| #8 | Administrator Member Registration and Management | P1 | Completed | [Issue #8](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/8) |
 
 ---
 
 ## Future Backlog (Sprints 3 - 5)
-* Goal: Advanced gym tracking, workout plans, attendance, and payments.
+* Goal: Advanced gym tracking, plan selection, workout plans, attendance, and payments.
 
 | Issue ID | Title | Priority | Status | Link |
 | :--- | :--- | :--- | :--- | :--- |
-| #4 | Daily Gym Attendance Logging | P2 | Backlog | [Issue #4](../../issues/4) |
-| #5 | Assign Workout Plans to Members | P3 | Backlog | [Issue #5](../../issues/5) |
-| #6 | Fee Payment Tracking | P3 | Backlog | [Issue #6](../../issues/6) |
+| #3 | Gym Membership Plan Selection | P2 | In-Progress | [Issue #3](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/3) |
+| #4 | Daily Gym Attendance Logging | P2 | Backlog | [Issue #4](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/4) |
+| #5 | Assign Workout Plans to Members | P3 | Backlog | [Issue #5](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/5) |
+| #6 | Fee Payment Tracking | P3 | Backlog | [Issue #6](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/6) |

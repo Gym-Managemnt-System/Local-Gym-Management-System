@@ -84,3 +84,107 @@ sequenceDiagram
     API-->>Frontend: Stream PDF file
     Frontend-->>Member: Download transfer-report.pdf
 ```
+
+
+Use Case Diagram
+
+```mermaid
+flowchart LR
+    Member([Member])
+    Trainer([Trainer])
+    Admin([Admin/Staff])
+
+    subgraph System[Gym Management System]
+        UC1([Register/Login])
+        UC2([View Membership Plans])
+        UC3([Subscribe/Renew Membership])
+        UC4([Make Payment])
+        UC5([View Payment History])
+        UC6([Enroll in Class])
+        UC7([Check In - Attendance])
+        UC8([Export Transfer Report])
+        UC9([View Class Schedule])
+        UC10([Manage Class Roster])
+        UC11([Mark Member Attendance])
+        UC12([Manage Members])
+        UC13([Manage Trainers])
+        UC14([Manage Membership Plans])
+        UC15([Manage Classes])
+        UC16([Process/Verify Payments])
+        UC17([View System Reports])
+    end
+
+    Member --> UC1
+    Member --> UC2
+    Member --> UC3
+    Member --> UC4
+    Member --> UC5
+    Member --> UC6
+    Member --> UC7
+    Member --> UC8
+
+    Trainer --> UC1
+    Trainer --> UC9
+    Trainer --> UC10
+    Trainer --> UC11
+
+    Admin --> UC1
+    Admin --> UC12
+    Admin --> UC13
+    Admin --> UC14
+    Admin --> UC15
+    Admin --> UC16
+    Admin --> UC17
+
+    UC3 -.-> UC4
+    UC8 -.-> UC7
+    UC8 -.-> UC5
+    UC8 -.-> UC6
+```
+Architecture Diagram
+
+
+```mermaid
+flowchart TB
+    subgraph Client["Client Layer"]
+        Web[Web App / Browser]
+        Mobile[Mobile App]
+    end
+
+    subgraph Frontend["Frontend"]
+        UI[React / Frontend App]
+    end
+
+    subgraph Backend["Backend API Server"]
+        Auth[Auth Middleware - JWT]
+        API[REST API Controllers]
+        Service[Business Logic / Services]
+        PDF[PDF Generator - pdfkit]
+    end
+
+    subgraph Data["Data Layer"]
+        DB[(MySQL Database)]
+        Cache[(Cache / Session Store - optional)]
+    end
+
+    subgraph External["External Concerns"]
+        Storage[File/Report Storage]
+        Mail[Email Service - notifications]
+    end
+
+    Web --> UI
+    Mobile --> UI
+    UI -->|HTTPS Requests| API
+    API --> Auth
+    Auth -->|Validates Token| API
+    API --> Service
+    Service --> DB
+    Service --> Cache
+    Service --> PDF
+    PDF --> Storage
+    Service --> Mail
+
+    DB -->|Query Results| Service
+    Service -->|JSON/Response| API
+    API -->|Response| UI
+```
