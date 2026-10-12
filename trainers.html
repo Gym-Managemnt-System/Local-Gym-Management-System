@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ironclad Fitness Center — Trainers</title>
+<title>RESET Fitness Center — Trainers</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,6 +65,9 @@
         <div class="admin-name">Greg V.</div>
         <div class="admin-role">Administrator</div>
       </div>
+      <button id="logoutBtn" class="logout-btn" aria-label="Log out">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
     </div>
   </aside>
 
@@ -73,15 +76,15 @@
     <div class="page-header">
       <div>
         <h1 class="page-title">Trainers</h1>
-        <p class="page-subtitle">8 active trainers across 5 class types</p>
+        <p class="page-subtitle">Active trainers across class types</p>
       </div>
-      <a href="add-trainer.html" class="btn-primary">+ Add trainer</a>
+      <a href="register-trainer.html" class="btn-primary">+ Add trainer</a>
     </div>
 
     <div class="filters-row">
       <div class="search-box">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <input type="text" placeholder="Search trainer" />
+        <input type="text" id="searchInput" placeholder="Search trainer" />
       </div>
 
       <div class="custom-dropdown" id="specialtyDropdown">
@@ -97,79 +100,11 @@
         </ul>
       </div>
     </div>
+
     <section class="panel bg-panel">
-    <div class="trainer-list">
-
-      <div class="trainer-card panel">
-        <input type="checkbox" class="trainer-check" />
-        <img src="../assets/T1.jpg" alt="Dilan Ranasinghe" class="trainer-photo" />
-        <div class="trainer-info">
-          <div class="trainer-name">Dilan Ranasinghe</div>
-          <div class="trainer-specialty">HIIT & Strength</div>
-        </div>
-        <div class="trainer-divider"></div>
-        <div class="trainer-stat">
-          <div class="stat-num">6</div>
-          <div class="stat-label">Classes</div>
-        </div>
-        <div class="trainer-stat">
-          <div class="stat-num">142</div>
-          <div class="stat-label">Members</div>
-        </div>
-        <div class="trainer-stat">
-          <div class="stat-num">4.9</div>
-          <div class="stat-label">Ratings</div>
-        </div>
-        <div class="menu-col">⋮</div>
+      <div class="trainer-list" id="trainerList">
+        <!-- Trainer cards will be dynamically rendered here by trainers-script.js -->
       </div>
-
-      <div class="trainer-card panel">
-        <input type="checkbox" class="trainer-check" />
-        <img src="../assets/T2.jpg" alt="Sanduni Madushani" class="trainer-photo" />
-        <div class="trainer-info">
-          <div class="trainer-name">Sanduni Madushani</div>
-          <div class="trainer-specialty">Yoga & Mobility</div>
-        </div>
-        <div class="trainer-divider"></div>
-        <div class="trainer-stat">
-          <div class="stat-num">5</div>
-          <div class="stat-label">Classes</div>
-        </div>
-        <div class="trainer-stat">
-          <div class="stat-num">98</div>
-          <div class="stat-label">Members</div>
-        </div>
-        <div class="trainer-stat">
-          <div class="stat-num">4.8</div>
-          <div class="stat-label">Ratings</div>
-        </div>
-        <div class="menu-col">⋮</div>
-      </div>
-
-      <div class="trainer-card panel">
-        <input type="checkbox" class="trainer-check" />
-        <img src="../assets/T3.jpg" alt="Harsha Jayasinghe" class="trainer-photo" />
-        <div class="trainer-info">
-          <div class="trainer-name">Harsha Jayasinghe</div>
-          <div class="trainer-specialty">Cardio & Spin</div>
-        </div>
-        <div class="trainer-divider"></div>
-        <div class="trainer-stat">
-          <div class="stat-num">7</div>
-          <div class="stat-label">Classes</div>
-        </div>
-        <div class="trainer-stat">
-          <div class="stat-num">116</div>
-          <div class="stat-label">Members</div>
-        </div>
-        <div class="trainer-stat">
-          <div class="stat-num">4.7</div>
-          <div class="stat-label">Ratings</div>
-        </div>
-        <div class="menu-col">⋮</div>
-      </div>
-
-    </div>
     </section>
 
     <div class="pagination">
@@ -198,5 +133,6 @@
 </div>
 
 <script src="trainers-script.js"></script>
+<script src="logout.js"></script>
 </body>
 </html>

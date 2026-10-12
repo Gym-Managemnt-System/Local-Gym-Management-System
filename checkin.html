@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fitness Center — Manual Check-in</title>
+<title>RESET Fitness Center — Manual Check-in</title>
 <link rel="stylesheet" href="checkin.css">
 </head>
 <body>
@@ -16,7 +16,9 @@
 
     <div class="field">
       <label for="searchMember">Search member</label>
-      <input type="text" id="searchMember" name="searchMember" placeholder="Type a name..." required>
+      <input type="text" id="searchMember" name="searchMember" placeholder="Type a name..." autocomplete="off" required>
+      <div class="search-suggestions" id="searchSuggestions"></div>
+      <input type="hidden" id="selectedMemberId" required>
     </div>
 
     <div class="field">
@@ -29,7 +31,7 @@
       <input type="text" id="note" name="note" placeholder="e.g. forgot card">
     </div>
 
-    <p class="error" id="errorMsg">Please select a member and check-in time.</p>
+    <p class="error" id="errorMsg"></p>
 
     <div class="btn-row">
       <a href="attendance.html" class="btn-cancel">Cancel</a>

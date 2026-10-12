@@ -45,7 +45,7 @@ genPasswordBtn.addEventListener('click', function(){
 });
 
 // Form submit
-form.addEventListener('submit', function(e){
+form.addEventListener('submit', async function(e){
   e.preventDefault();
 
   const fullName = document.getElementById('fullName').value.trim();
@@ -56,21 +56,52 @@ form.addEventListener('submit', function(e){
     errorMsg.style.display = 'block';
     return;
   }
+  
+  let password = genPasswordValue.textContent;
+  if (!password) {
+    alert('Please generate a password first.');
+    return;
+  }
+  
   errorMsg.style.display = 'none';
 
-  const trainer = {
-    fullName,
-    email,
-    phone,
-    dob: document.getElementById('dob').value,
-    gender: document.getElementById('gender').value,
-    address: document.getElementById('address').value.trim(),
-    specialties: getSelectedSpecialties(),
+  const payload = {
+    full_name: fullName,
+    email: email,
+    phone: phone,
+    dob: document.getElementById('dob').value || null,
+    gender: document.getElementById('gender').value || null,
+    address: document.getElementById('address').value.trim() || null,
+    specialization: getSelectedSpecialties().join(', ') || null,
     username: genUsernameValue.textContent || null,
-    password: genPasswordValue.textContent || null
+    password: password
   };
 
-  // Replace this with a real API call, e.g. fetch('/api/trainers', { method: 'POST', body: JSON.stringify(trainer) })
-  console.log('Creating trainer account:', trainer);
-  alert('Trainer account created for ' + fullName);
+  const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+  if (!token) {
+    alert('Authentication missing. Please log in as Admin.');
+    return;
+  }
+
+  try {
+    const response = await fetch('http://localhost:5000/api/trainers/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      alert('Trainer account created successfully!');
+      window.location.href = 'trainers.html';
+    } else {
+      alert('Error: ' + (data.message || 'Failed to create trainer.'));
+    }
+  } catch (err) {
+    console.error('Error:', err);
+    alert('Could not reach backend server.');
+  }
 });
