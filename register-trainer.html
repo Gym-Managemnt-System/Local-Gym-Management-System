@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RESET Fitness Center — Create Trainer Account</title>
+<link rel="stylesheet" href="register-trainer.css">
+</head>
+<body>
+
+  <div class="brand">Fitness Center</div>
+  <div class="figure" aria-hidden="true"></div>
+
+  <form class="card" id="registerTrainerForm" novalidate>
+    <h1>Create trainer account</h1>
+
+    <div class="section-label">Personal details</div>
+
+    <div class="field">
+      <label for="fullname">Full name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="07X XXX XXXX">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
+      </div>
+      <div class="field">
+        <label for="gender">Gender</label>
+        <div class="custom-select" id="genderSelect">
+          <button type="button" class="custom-select-trigger" id="genderTrigger">
+            <span id="genderValue">Select</span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <ul class="custom-select-options" id="genderOptions">
+            <li data-value="">Select</li>
+            <li data-value="Female">Female</li>
+            <li data-value="Male">Male</li>
+            <li data-value="Other">Other</li>
+          </ul>
+        </div>
+        <input type="hidden" id="gender" name="gender">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="address">Home address</label>
+      <input type="text" id="address" name="address" placeholder="Street, city">
+    </div>
+
+    <div class="section-label">Specialties</div>
+
+    <div class="specialties-row" id="specialtiesRow">
+      <button type="button" class="chip-card" data-value="HIIT">HIIT</button>
+      <button type="button" class="chip-card" data-value="Cardio">Cardio</button>
+      <button type="button" class="chip-card" data-value="Strength">Strength</button>
+      <button type="button" class="chip-card" data-value="Yoga">Yoga</button>
+      <button type="button" class="chip-card" data-value="Pilates">Pilates</button>
+    </div>
+
+    <div class="gen-row">
+      <button type="button" class="btn-gen" id="genUsername">Generate username</button>
+      <button type="button" class="btn-gen" id="genPassword">Generate Password</button>
+    </div>
+
+    <div class="field">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Auto-generated or type your own">
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Auto-generated or type your own" required>
+    </div>
+
+    <p class="error" id="errorMsg">Please fill in all required fields.</p>
+
+    <button type="submit" class="btn-create">Create account</button>
+  </form>
+
+<script src="register-trainer-script.js"></script>
+
+</body>
+</html>

@@ -104,59 +104,6 @@
 
     <section class="panel classes-panel">
       <div class="class-grid">
-
-        <div class="class-card">
-          <div class="class-card-top">
-            <span class="class-time">6:00 AM — 45 min</span>
-            <span class="class-menu">⋮</span>
-          </div>
-          <div class="class-name">HIIT Circuit</div>
-          <div class="class-trainer">Trainer: Dilan Ranasinghe</div>
-          <div class="class-progress">
-            <div class="class-progress-fill" style="width:70%"></div>
-          </div>
-          <div class="class-booked">14 / 20 booked</div>
-        </div>
-
-        <div class="class-card">
-          <div class="class-card-top">
-            <span class="class-time">8:30 AM — 60 min</span>
-            <span class="class-menu">⋮</span>
-          </div>
-          <div class="class-name">Yoga Flow</div>
-          <div class="class-trainer">Trainer: Sanduni Madushani</div>
-          <div class="class-progress">
-            <div class="class-progress-fill" style="width:45%"></div>
-          </div>
-          <div class="class-booked">9 / 20 booked</div>
-        </div>
-
-        <div class="class-card">
-          <div class="class-card-top">
-            <span class="class-time">5:30 PM — 50 min</span>
-            <span class="class-menu">⋮</span>
-          </div>
-          <div class="class-name">Strength Basics</div>
-          <div class="class-trainer">Trainer: Dilan Ranasinghe</div>
-          <div class="class-progress">
-            <div class="class-progress-fill" style="width:88%"></div>
-          </div>
-          <div class="class-booked">21 / 24 booked</div>
-        </div>
-
-        <div class="class-card">
-          <div class="class-card-top">
-            <span class="class-time">6:45 PM — 40 min</span>
-            <span class="class-menu">⋮</span>
-          </div>
-          <div class="class-name">Spin Sprint</div>
-          <div class="class-trainer">Trainer: Harsha Jayasinghe</div>
-          <div class="class-progress">
-            <div class="class-progress-fill" style="width:60%"></div>
-          </div>
-          <div class="class-booked">12 / 20 booked</div>
-        </div>
-
       </div>
 
       <div class="pagination">
@@ -183,6 +130,67 @@
 
   </main>
 
+</div>
+
+<!-- Edit Class Modal -->
+<div class="modal-overlay" id="editModalOverlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Edit Class</h2>
+      <button type="button" class="modal-close" id="editModalClose">&times;</button>
+    </div>
+    <form id="editClassForm">
+      <input type="hidden" id="editClassId">
+      <div class="field">
+        <label for="editClassName">Class name</label>
+        <input type="text" id="editClassName" required>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="editClassTime">Time</label>
+          <input type="time" id="editClassTime" required>
+        </div>
+        <div class="field">
+          <label for="editClassCategory">Category</label>
+          <select id="editClassCategory" required>
+            <option value="hiit">HIIT</option>
+            <option value="yoga">Yoga</option>
+            <option value="strength">Strength</option>
+            <option value="cardio">Cardio</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="editClassTrainer">Trainer</label>
+        <select id="editClassTrainer" required></select>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="editClassDuration">Duration (min)</label>
+          <input type="number" id="editClassDuration" min="1">
+        </div>
+        <div class="field">
+          <label for="editClassCapacity">Max capacity</label>
+          <input type="number" id="editClassCapacity" min="1">
+        </div>
+      </div>
+      <p class="modal-error" id="editModalError"></p>
+      <button type="submit" class="btn-primary modal-submit">Save changes</button>
+    </form>
+  </div>
+</div>
+
+<!-- Booked Members Modal -->
+<div class="modal-overlay" id="membersModalOverlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2 id="membersModalTitle">Booked Members</h2>
+      <button type="button" class="modal-close" id="membersModalClose">&times;</button>
+    </div>
+    <div id="membersModalBody">
+      <p style="color: var(--muted);">Loading…</p>
+    </div>
+  </div>
 </div>
 
 <script src="classes-script.js"></script>

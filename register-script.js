@@ -67,14 +67,25 @@ document.addEventListener('click', function(){
   genderSelect.classList.remove('open');
 });
 
+// PREVENT ACCIDENTAL ENTER-KEY SUBMISSION
+document.getElementById('registerForm').addEventListener('keydown', function(e){
+  if(e.key === 'Enter' && e.target.tagName !== 'TEXTAREA'){
+    if(e.target.type !== 'submit'){
+      e.preventDefault();
+    }
+  }
+});
+
 // FORM SUBMISSION
-document.getElementById('registerForm').addEventListener('submit', function(e){
+document.getElementById('registerForm').addEventListener('submit', async function(e){
   e.preventDefault();
+
   const fullname = document.getElementById('fullname').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
   const dob = document.getElementById('dob').value;
   const gender = document.getElementById('gender').value;
+  const address = document.getElementById('address').value.trim();
   const username = document.getElementById('username').value.trim();
   const password = document.getElementById('password').value;
   const plan = document.getElementById('selectedPlan').value;
@@ -82,14 +93,60 @@ document.getElementById('registerForm').addEventListener('submit', function(e){
 
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  if(!fullname || !emailOk || !phone || !dob || !gender || !username || !password){
+  if(!fullname || !emailOk || !password){
+    err.textContent = 'Please fill in all required fields.';
     err.classList.add('show');
     err.style.display = 'block';
     return;
   }
+
   err.classList.remove('show');
   err.style.display = 'none';
 
-  // TODO: replace with a real API call to your backend
-  alert('Member account created (wire this up to your backend).\nName: ' + fullname + '\nPlan: ' + plan);
+  const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+
+  if(!token){
+    err.textContent = 'You must be logged in as an admin to register members.';
+    err.classList.add('show');
+    err.style.display = 'block';
+    return;
+  }
+
+  try{
+    const response = await fetch('http://localhost:5000/api/members/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token
+      },
+      body: JSON.stringify({
+        full_name: fullname,
+        email: email,
+        phone: phone,
+        dob: dob,
+        gender: gender,
+        address: address,
+        username: username,
+        password: password,
+        plan_name: plan
+      })
+    });
+
+    const data = await response.json();
+
+    if(!response.ok){
+      err.textContent = data.message || 'Failed to register member.';
+      err.classList.add('show');
+      err.style.display = 'block';
+      return;
+    }
+
+    alert('Member registered successfully.');
+    window.location.href = 'members.html';
+
+  } catch(networkErr){
+    err.textContent = 'Could not reach the server. Is the backend running?';
+    err.classList.add('show');
+    err.style.display = 'block';
+  }
 });

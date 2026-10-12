@@ -4,65 +4,133 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fitness Center — Edit Member</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Asta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="members.css">
 <link rel="stylesheet" href="checkin.css">
 </head>
 <body>
 
-  <div class="brand">Fitness Center</div>
+<div class="app">
 
-  <form class="card" id="editMemberForm" novalidate>
-    <h1>Edit membership</h1>
-    <p class="lead" id="editMemberName">Loading...</p>
+  <aside class="sidebar">
+    <div class="sidebar-brand">Fitness Center</div>
 
-    <div class="field">
-      <label>Plan</label>
-      <div class="custom-dropdown" id="planDropdownEdit">
-        <button type="button" class="custom-dropdown-trigger">
-          <span class="custom-dropdown-label">Basic</span>
-          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <ul class="custom-dropdown-options">
-          <li data-value="basic" class="selected">Basic</li>
-          <li data-value="standard">Standard</li>
-          <li data-value="premium">Premium</li>
-        </ul>
+    <nav class="nav-group">
+      <div class="nav-label">Overview</div>
+      <a href="dashboard.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Dashboard
+      </a>
+      <a href="members.html" class="nav-item active">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Members
+      </a>
+      <a href="attendance.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 16 14"/></svg>
+        Attendance
+      </a>
+      <a href="trainers.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.4 14.4 9.6 9.6"/><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/><path d="m21.5 21.5-1.4-1.4"/><path d="M3.9 3.9 2.5 2.5"/><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/></svg>
+        Trainers
+      </a>
+      <a href="classes.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        Classes
+      </a>
+    </nav>
+
+    <nav class="nav-group">
+      <div class="nav-label">Business</div>
+      <a href="payments.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+        Payments
+      </a>
+      <a href="membership-plans.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+        Membership Plans
+      </a>
+      <a href="reports.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="admin-profile">
+      <img src="../assets/admin1.jpg" alt="Admin avatar" class="admin-avatar" />
+      <div class="admin-info">
+        <div class="admin-name">Greg V.</div>
+        <div class="admin-role">Administrator</div>
       </div>
+      <button id="logoutBtn" class="logout-btn" aria-label="Log out">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
     </div>
+  </aside>
 
-    <div class="field">
-      <label for="editStart">Membership start</label>
-      <input type="date" id="editStart" required>
+  <main class="main">
+    <div class="edit-container">
+      <form class="card" id="editMemberForm" novalidate>
+        <h1>Edit membership</h1>
+        <p class="lead" id="editMemberName">Loading...</p>
+
+        <div class="field">
+          <label>Plan</label>
+          <div class="custom-dropdown" id="planDropdownEdit">
+            <button type="button" class="custom-dropdown-trigger">
+              <span class="custom-dropdown-label">Basic</span>
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+            <ul class="custom-dropdown-options">
+              <li data-value="basic" class="selected">Basic</li>
+              <li data-value="standard">Standard</li>
+              <li data-value="premium">Premium</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="editStart">Membership start</label>
+          <input type="date" id="editStart" class="form-input" required>
+        </div>
+
+        <div class="field">
+          <label for="editEnd">Membership end</label>
+          <input type="date" id="editEnd" class="form-input" required>
+        </div>
+
+        <div class="field">
+          <label>Status</label>
+          <div class="custom-dropdown" id="statusDropdownEdit">
+            <button type="button" class="custom-dropdown-trigger">
+              <span class="custom-dropdown-label">Active</span>
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+            <ul class="custom-dropdown-options">
+              <li data-value="active" class="selected">Active</li>
+              <li data-value="expired">Expired</li>
+              <li data-value="deactivated">Deactivated</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="error" id="errorMsg" style="display: none;"></p>
+
+        <div class="btn-row">
+          <a href="members.html" class="btn-cancel">Cancel</a>
+          <button type="submit" class="btn-confirm">Save changes</button>
+        </div>
+      </form>
     </div>
+  </main>
 
-    <div class="field">
-      <label for="editEnd">Membership end</label>
-      <input type="date" id="editEnd" required>
-    </div>
-
-    <div class="field">
-      <label>Status</label>
-      <div class="custom-dropdown" id="statusDropdownEdit">
-        <button type="button" class="custom-dropdown-trigger">
-          <span class="custom-dropdown-label">Active</span>
-          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <ul class="custom-dropdown-options">
-          <li data-value="active" class="selected">Active</li>
-          <li data-value="expired">Expired</li>
-          <li data-value="deactivated">Deactivated</li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="error" id="errorMsg"></p>
-
-    <div class="btn-row">
-      <a href="members.html" class="btn-cancel">Cancel</a>
-      <button type="submit" class="btn-confirm">Save changes</button>
-    </div>
-  </form>
+</div>
 
 <script src="edit-member-script.js"></script>
-
+<script src="logout.js"></script>
 </body>
 </html>
