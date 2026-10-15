@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports | Fitness Center</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">Fitness Center</div>
+
+      <nav class="nav">
+        <p class="nav-label">Overview</p>
+        <a href="#" class="nav-link"><span class="ico">⌂</span>Dashboard</a>
+        <a href="#" class="nav-link"><span class="ico">👥</span>Members</a>
+        <a href="#" class="nav-link"><span class="ico">✔</span>Attendance</a>
+        <a href="#" class="nav-link"><span class="ico">🏋</span>Trainers</a>
+        <a href="#" class="nav-link"><span class="ico">📅</span>Classes</a>
+
+        <p class="nav-label business">Business</p>
+        <a href="#" class="nav-link"><span class="ico">💳</span>Payments</a>
+        <a href="#" class="nav-link"><span class="ico">🎟</span>Membership Plans</a>
+        <a href="#" class="nav-link active" aria-current="page"><span class="ico">📄</span>Reports</a>
+      </nav>
+
+      <div class="profile">
+        <div class="avatar">GV</div>
+        <div>
+          <div class="profile-name">Greg V.</div>
+          <div class="profile-role">Administrator</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <h1 class="page-title">Reports</h1>
+
+      <!-- Report type selector -->
+      <section class="report-tabs" id="reportTabs" role="tablist" aria-label="Report types">
+        <button class="tab" role="tab" data-report="membership">
+          <strong>Membership growth</strong>
+          <span>New sign-up vs cancelations</span>
+        </button>
+        <button class="tab active" role="tab" data-report="revenue">
+          <strong>Revenue Summary</strong>
+          <span>Plan, month &amp; payment method</span>
+        </button>
+        <button class="tab" role="tab" data-report="attendance">
+          <strong>Attendance Trends</strong>
+          <span>Peak hours &amp; weekly patterns</span>
+        </button>
+        <button class="tab" role="tab" data-report="trainers">
+          <strong>Trainer performance</strong>
+          <span>Load, rating &amp; retention</span>
+        </button>
+      </section>
+
+      <!-- Chart card -->
+      <section class="card">
+        <header class="card-head">
+          <h2 id="chartTitle">Revenue | Last 6 months</h2>
+          <button class="link-btn" id="exportPdf">Export PDF</button>
+        </header>
+        <div class="chart" id="chart" aria-label="Bar chart"></div>
+      </section>
+
+      <!-- Table card -->
+      <section class="card">
+        <header class="card-head">
+          <h2 id="tableTitle">Revenue | Last 6 months</h2>
+          <button class="link-btn" id="exportCsv">Export CSV</button>
+        </header>
+        <table class="table" id="dataTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <div class="tooltip" id="tooltip" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
