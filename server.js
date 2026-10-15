@@ -9,6 +9,7 @@ const paymentRoutes = require('./src/routes/paymentRoutes');
 const trainerClassRoutes = require('./src/routes/trainerClassRoutes');
 const planRoutes = require('./src/routes/planRoutes');
 const reportRoutes = require('./src/routes/reportRoutes');
+const dashboardRoutes = require('./src/routes/dashboardRoutes');
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use('/api/payments', paymentRoutes);
 app.use('/api', trainerClassRoutes); // /api/trainers, /api/classes
 app.use('/api/plans', planRoutes);
 app.use('/api/reports', reportRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 // 404 handler
 app.use((req, res) => {

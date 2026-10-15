@@ -20,7 +20,8 @@ CREATE TABLE IF NOT EXISTS membership_plans (
   plan_name VARCHAR(100) NOT NULL,
   duration_months INT NOT NULL,
   price DECIMAL(10,2) NOT NULL,
-  description TEXT
+  description TEXT,
+  is_active TINYINT(1) DEFAULT 1
 );
 
 -- FR-1, FR-3, FR-8: Members and their membership status
