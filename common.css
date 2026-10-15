@@ -127,7 +127,24 @@ html, body{
   font-size:11px;
   color: rgba(54, 47, 47, 0.6);
 }
+.logout-btn{
+  margin-left:auto;
+  background:none;
+  border:none;
+  color: #260600;
+  cursor:pointer;
+  padding:6px;
+  flex-shrink:0;
+}
 
+.logout-btn:hover{
+  color: #7d3a07;
+}
+
+.logout-btn svg{
+  width:18px;
+  height:18px;
+}
 /* MAIN LAYOUT (shared) */
 .main{
   flex:1;

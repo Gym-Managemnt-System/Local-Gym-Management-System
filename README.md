@@ -1,8 +1,5 @@
 # Fitness Center — Member Signup
 
-A "Create member account" form (matching the provided design) with a working
-backend API.
-
 ```
 fitness-app/
 ├── frontend/         Plain HTML/CSS/JS — no build step

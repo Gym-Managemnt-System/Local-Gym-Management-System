@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Center — Record Payment</title>
+<link rel="stylesheet" href="register-trainer.css">
+</head>
+<body>
+
+  <div class="brand">Fitness Center</div>
+  <a href="payments.html" class="back-link">← Back to Payments</a>
+  <div class="figure" aria-hidden="true"></div>
+
+  <form class="card" id="paymentForm" novalidate>
+    <h1>Record Payment</h1>
+
+    <div class="section-label">Payment Details</div>
+
+    <div class="field">
+      <label for="memberId">Member</label>
+      <div class="custom-select" id="memberSelect">
+        <button type="button" class="custom-select-trigger" id="memberTrigger">
+          <span id="memberValue">Select a member...</span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <ul class="custom-select-options" id="memberOptions">
+          <li data-value="">Loading members...</li>
+        </ul>
+      </div>
+      <input type="hidden" id="memberInput" name="memberId" required>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="amount">Amount (Rs)</label>
+        <div class="custom-select" id="amountSelect">
+          <button type="button" class="custom-select-trigger" id="amountTrigger">
+            <span id="amountValue">Select amount...</span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <ul class="custom-select-options" id="amountOptions">
+            <li data-value="">Loading amounts...</li>
+          </ul>
+        </div>
+        <input type="hidden" id="amountInput" name="amount" required>
+      </div>
+      <div class="field">
+        <label for="paymentDate">Payment Date</label>
+        <input type="date" id="paymentDate" name="paymentDate" required>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="paymentMethod">Payment Method</label>
+        <div class="custom-select" id="methodSelect">
+          <button type="button" class="custom-select-trigger" id="methodTrigger">
+            <span id="methodValue">Card</span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <ul class="custom-select-options" id="methodOptions">
+            <li data-value="Card">Card</li>
+            <li data-value="Cash">Cash</li>
+            <li data-value="Bank Transfer">Bank Transfer</li>
+          </ul>
+        </div>
+        <input type="hidden" id="methodInput" name="paymentMethod" value="Card">
+      </div>
+      <div class="field">
+        <label for="status">Status</label>
+        <div class="custom-select" id="statusSelect">
+          <button type="button" class="custom-select-trigger" id="statusTrigger">
+            <span id="statusValue">Paid</span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <ul class="custom-select-options" id="statusOptions">
+            <li data-value="paid">Paid</li>
+            <li data-value="pending">Pending</li>
+            <li data-value="overdue">Overdue</li>
+          </ul>
+        </div>
+        <input type="hidden" id="statusInput" name="status" value="Paid">
+      </div>
+    </div>
+
+    <p class="error" id="errorMsg">Please fill in all required fields.</p>
+
+    <button type="submit" class="btn-create" style="margin-top: 15px;">Record Payment</button>
+  </form>
+
+<script src="record-payment.js"></script>
+</body>
+</html>
