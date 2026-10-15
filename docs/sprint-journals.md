@@ -11,7 +11,7 @@ This document maintains the sprint goals, daily standup summaries, and sprint re
 ### Standup Logs
 - **Date: 2026-08-14**
   - **Members Present:** All Team Members
-  - **Discussion:** Finalized project topic as "Local Gym Management System" and defined initial high-level epics. Initialized private GitHub repository and project board.
+  - **Discussion:** Finalized project topic as "Local Gym Management System" (Issue #1) and initialized private GitHub repository and project board (Issue #7).
 - **Date: 2026-08-18**
   - **Members Present:** All Team Members
   - **Discussion:** Created initial product backlog and drafted GitHub Issues with Given-When-Then acceptance criteria. Invited course lecturer with read-only access.
@@ -33,7 +33,7 @@ This document maintains the sprint goals, daily standup summaries, and sprint re
   - **Discussion:** Started Sprint 2 planning. Assigned Issue #8 (Admin Member Registration) and Issue #2 (Login System) to dev team.
 - **Date: 2026-08-26**
   - **Members Present:** All Team Members
-  - **Discussion:** Working on admin management components and backend structure. Ensured all feature branches use pull requests to main.
+  - **Discussion:** Working on admin management components, member modules (Issue #14), and frontend UI implementation (Issue #13). Ensured all feature branches use pull requests to main.
 - **Date: 2026-09-01**
   - **Members Present:** All Team Members
   - **Discussion:** Preparing documentation and verifying project board alignment for Mid-Project Review (Milestone 1).
@@ -52,10 +52,10 @@ This document maintains the sprint goals, daily standup summaries, and sprint re
 ### Standup Logs
 - **Date: 2026-09-06**
   - **Members Present:** All Team Members
-  - **Discussion:** Initiated Sprint 3. Distributed tasks for gym membership plan selections and daily attendance tracking.
+  - **Discussion:** Initiated Sprint 3. Distributed tasks for gym membership plan selections (Issue #3) and daily attendance logging & tracking (Issue #4, Issue #9).
 - **Date: 2026-09-11**
   - **Members Present:** All Team Members
-  - **Discussion:** Integrated trainer records and fitness class scheduling modules. Updated architecture diagrams (`docs/architecture.md`) using Mermaid.js.
+  - **Discussion:** Integrated trainer records, fitness class scheduling (Issue #10), and workout plan assignments (Issue #5). Updated architecture diagrams (`docs/architecture.md`) using Mermaid.js.
 - **Date: 2026-09-15**
   - **Members Present:** All Team Members
   - **Discussion:** Reviewed attendance tracking logic and workout plan assignment workflows. Conducted Sprint Review 2 with the Client Team.
@@ -72,15 +72,15 @@ This document maintains the sprint goals, daily standup summaries, and sprint re
 - **Duration:** September 19, 2026 – October 2, 2026
 
 ### Standup Logs
-- **Date: 2026-09-20`
+- **Date: 2026-09-20**
   - **Members Present:** All Team Members
-  - **Discussion:** Began Sprint 4 tasks focusing on fee payment tracking and admin analytics dashboards.
+  - **Discussion:** Began Sprint 4 tasks focusing on fee payment tracking (Issue #6) and admin analytics dashboards (Issue #11).
 - **Date: 2026-09-26**
   - **Members Present:** All Team Members
-  - **Discussion:** Implemented PDF membership report generation features. Prepared test environments for client UAT.
+  - **Discussion:** Implemented PDF membership report generation features (Issue #12). Prepared test environments for client UAT.
 - **Date: 2026-09-30**
   - **Members Present:** All Team Members
-  - **Discussion:** Conducted User Acceptance Testing (UAT) session with the Client Team. Logged feedback and created Issue #15 for minor UI polish fixes.
+  - **Discussion:** Conducted User Acceptance Testing (UAT) session with the Client Team (Issue #17). Logged feedback and finalized minor UI polish fixes.
 
 ### Sprint Retrospective 4
 - **What went well:** All primary scope items, payment tracking, and PDF export functionalities completed successfully. UAT feedback was minimal and resolved quickly.
@@ -96,10 +96,10 @@ This document maintains the sprint goals, daily standup summaries, and sprint re
 ### Standup Logs
 - **Date: 2026-10-04**
   - **Members Present:** All Team Members
-  - **Discussion:** Initiated Sprint 5 packaging tasks. Configured cloud hosting setup for public deployment (Issue #16).
+  - **Discussion:** Initiated Sprint 5 packaging tasks. Configured cloud hosting setup for public deployment (Issue #19).
 - **Date: 2026-10-10**
   - **Members Present:** All Team Members
-  - **Discussion:** Finalized README handover documentation and verified individual student portfolio submissions (Issue #17).
+  - **Discussion:** Finalized README handover documentation and verified individual student portfolio submissions (Issue #20).
 - **Date: 2026-10-14**
   - **Members Present:** All Team Members
   - **Discussion:** Final run-through of the application, local fallback checks, and preparation for the final Milestone 2 viva.
