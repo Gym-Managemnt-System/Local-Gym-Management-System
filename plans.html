@@ -1,140 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fitness Center — Membership Plans</title>
-<link rel="stylesheet" href="plans.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membership Plans | Fitness Center</title>
+  <link rel="stylesheet" href="plans.css" />
 </head>
 <body>
+  <div class="app">
 
-<div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">Fitness Center</div>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="brand">Fitness Center</div>
+      <nav class="nav">
+        <p class="nav-label">Overview</p>
+        <a href="#" class="nav-link"><span class="ico">⌂</span>Dashboard</a>
+        <a href="#" class="nav-link"><span class="ico">👥</span>Members</a>
+        <a href="#" class="nav-link"><span class="ico">✔</span>Attendance</a>
+        <a href="#" class="nav-link"><span class="ico">🏋</span>Trainers</a>
+        <a href="#" class="nav-link"><span class="ico">📅</span>Classes</a>
 
-    <nav class="nav-group">
-      <p class="nav-label">Overview</p>
-      <a href="#" class="nav-item">
-        <span class="icon">▦</span> Dashboard
-      </a>
-      <a href="#" class="nav-item">
-        <span class="icon">☺</span> Members
-      </a>
-      <a href="#" class="nav-item">
-        <span class="icon">✓</span> Attendance
-      </a>
-      <a href="#" class="nav-item">
-        <span class="icon">★</span> Trainers
-      </a>
-      <a href="#" class="nav-item">
-        <span class="icon">▤</span> Classes
-      </a>
-    </nav>
+        <p class="nav-label business">Business</p>
+        <a href="#" class="nav-link"><span class="ico">💳</span>Payments</a>
+        <a href="#" class="nav-link active" aria-current="page"><span class="ico">🎟</span>Membership Plans</a>
+        <a href="#" class="nav-link"><span class="ico">📄</span>Reports</a>
+      </nav>
 
-    <nav class="nav-group">
-      <p class="nav-label">Business</p>
-      <a href="#" class="nav-item">
-        <span class="icon">▢</span> Payments
-      </a>
-      <a href="#" class="nav-item active">
-        <span class="icon">▥</span> Membership Plans
-      </a>
-      <a href="#" class="nav-item">
-        <span class="icon">▧</span> Reports
-      </a>
-    </nav>
+      <div class="profile">
+        <div class="avatar">GV</div>
+        <div>
+          <div class="profile-name">Greg V.</div>
+          <div class="profile-role">Administrator</div>
+        </div>
+      </div>
+    </aside>
 
-    <div class="user-card">
-      <div class="avatar">GV</div>
-      <div>
-        <div class="user-name">Greg V.</div>
-        <div class="user-role">Administrator</div>
+    <!-- Main -->
+    <main class="main">
+      <header class="page-head">
+        <div>
+          <h1 class="page-title">Membership Plans</h1>
+          <p class="page-sub" id="summary"></p>
+        </div>
+        <button class="btn btn-grad" id="addPlan">+ Add plan</button>
+      </header>
+
+      <section class="plans-panel">
+        <div class="plans" id="plans"></div>
+        <p class="empty" id="empty" hidden>No active plans. Click “Add plan” to create one.</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Add / Edit modal -->
+  <div class="modal" id="modal" hidden>
+    <form class="modal-box" id="planForm" novalidate>
+      <h2 id="modalTitle">Edit plan</h2>
+
+      <label>Plan name
+        <input type="text" id="fName" required maxlength="30" />
+      </label>
+
+      <div class="row">
+        <label>Price (Rs / month)
+          <input type="number" id="fPrice" min="0" step="50" required />
+        </label>
+        <label>Billing note
+          <input type="text" id="fBilling" maxlength="40" placeholder="Billed monthly | no lock-in" />
+        </label>
+      </div>
+
+      <label>Features <small>(one per line)</small>
+        <textarea id="fFeatures" rows="4"></textarea>
+      </label>
+
+      <label class="check">
+        <input type="checkbox" id="fPopular" /> Mark as “Most popular”
+      </label>
+
+      <p class="error" id="formError" role="alert"></p>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" id="cancelBtn">Cancel</button>
+        <button type="submit" class="btn btn-grad">Save</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Archive confirm -->
+  <div class="modal" id="confirm" hidden>
+    <div class="modal-box small">
+      <h2>Archive plan?</h2>
+      <p id="confirmText"></p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="confirmNo">Cancel</button>
+        <button class="btn btn-grad" id="confirmYes">Archive</button>
       </div>
     </div>
-  </aside>
+  </div>
 
-  <!-- Main content -->
-  <main class="main">
-    <h1 class="page-title">Membership Plans</h1>
-    <p class="page-sub">3 active plans | 584 members enrolled</p>
-
-    <section class="plans-panel">
-      <div class="plans-row">
-
-        <!-- Basic -->
-        <div class="plan-card">
-          <p class="plan-name">Basic</p>
-          <p class="plan-price">Rs 3,000<span>/mo</span></p>
-          <p class="plan-billing">Billed monthly | no lock-in</p>
-
-          <ul class="plan-features">
-            <li>Gym floor access</li>
-            <li>Locker access</li>
-            <li>2 group classes / week</li>
-          </ul>
-
-          <p class="plan-enrolled">112 members enrolled</p>
-
-          <div class="plan-actions">
-            <button class="btn-edit" data-plan="basic">Edit</button>
-            <button class="btn-archive" data-plan="basic">Archive</button>
-          </div>
-        </div>
-
-        <!-- Standard -->
-        <div class="plan-card featured">
-          <span class="badge">Most popular</span>
-          <p class="plan-name">Standard</p>
-          <p class="plan-price">Rs 2,500<span>/mo</span></p>
-          <p class="plan-billing">Billed every 3 months</p>
-
-          <ul class="plan-features">
-            <li>Everything in Basic</li>
-            <li>Unlimited group classes</li>
-            <li>1 PT session / month</li>
-          </ul>
-
-          <p class="plan-enrolled">300 members enrolled</p>
-
-          <div class="plan-actions">
-            <button class="btn-edit" data-plan="standard">Edit</button>
-            <button class="btn-archive" data-plan="standard">Archive</button>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="plans-row plans-row-center">
-
-        <!-- Premium -->
-        <div class="plan-card">
-          <p class="plan-name">Premium</p>
-          <p class="plan-price">Rs 2,000<span>/mo</span></p>
-          <p class="plan-billing">Billed annually</p>
-
-          <ul class="plan-features">
-            <li>Everything in Standard</li>
-            <li>Unlimited PT sessions</li>
-            <li>Priority class booking</li>
-          </ul>
-
-          <p class="plan-enrolled">172 members enrolled</p>
-
-          <div class="plan-actions">
-            <button class="btn-edit" data-plan="premium">Edit</button>
-            <button class="btn-archive" data-plan="premium">Archive</button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-</div>
-
-<script src="plans.js"></script>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="plans.js"></script>
 </body>
 </html>
