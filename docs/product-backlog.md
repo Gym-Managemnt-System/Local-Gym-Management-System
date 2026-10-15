@@ -53,7 +53,7 @@ This document tracks the prioritized Epics and User Stories for the Local Gym Ma
 | #6 | Fee Payment Tracking | P2 | Completed | [Issue #6](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/6) |
 | #11 | Admin Dashboard and Reports Generation | P2 | Completed | [Issue #11](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/11) |
 | #12 | Generate PDF Membership Transfer Report | P3 | Completed | [Issue #12](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/12) |
-| #16 | Client User Acceptance Testing (UAT) & Feedback Fixes | P2 | Completed | [Issue #16](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/16) |
+| #17 | Client User Acceptance Testing (UAT) & Feedback Fixes | P2 | Completed | [Issue #17](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/17) |
 
 ---
 
