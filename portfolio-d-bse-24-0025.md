@@ -59,14 +59,14 @@ As the **Scrum Master (SM)**, my primary responsibilities were facilitating Scru
 ## 2. Critical Agile Reflection
 
 ### Team Bottleneck Faced
-During Sprints 3 and 4, our development team faced a bottleneck in synchronizing backend Express REST API schemas with frontend user forms (e.g., member registration and attendance logs). Feature branches drifted due to inconsistent endpoint naming, causing merge conflicts.
+During Sprints 3 and 4, our development team faced a bottleneck in synchronizing backend Express REST API schemas with frontend user forms (e.g., member registration and attendance logs). Additionally, during Sprint 5 (Hardening & Handover), minor environment configuration clashes and database connectivity inconsistencies emerged while preparing for local deployment and final handover.
 
 ### Adaptation & Self-Organization
-As Scrum Master, I organized short daily standup calls to establish shared request/response formats before frontend integration began. I enforced strict Pull Request guidelines requiring developers to rebase feature branches onto the main branch, ensuring clean merges without breaking active builds.
+As Scrum Master, I organized short daily standup calls and alignment sessions to establish strict request/response contracts before frontend integration. For Sprint 5 handover, since cloud deployment was non-mandatory and local environment execution was approved for the evaluation, I coordinated a robust local staging protocol. I consolidated all database initialization scripts, `.env` templates, and startup documentation to ensure a seamless, error-free demonstration setup directly from local developer machines during the final viva. I also enforced strict Pull Request guidelines requiring developers to rebase feature branches onto the main integration branch, ensuring clean merges without breaking active builds.
 
 ### Applied Engineering Practices
-- **Code Reviews:** Conducted pull request reviews prior to merging into main to verify interface consistency and coding standards.
-- **Pair Programming:** Organized targeted pair programming sessions between frontend and backend developers to resolve authentication token handling in local storage.
+- **Code Reviews:** Conducted pull request reviews prior to merging into main to verify interface consistency, proper error handling, and coding standards.
+- **Pair Programming:** Organized targeted pair programming sessions between frontend and backend developers to resolve authentication token handling and local storage state synchronization.
 
 ---
 
