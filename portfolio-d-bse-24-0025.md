@@ -2,7 +2,7 @@
 
 - **Student Name:** T.H.Nikeshala Dewindi
 - **Student ID:** D/BSE/24/0025
-- **Role:** Scrum Master (SM) & UI/UX Frontend Developer
+- **Role:** Scrum Master (SM)
 - **Degree Program:** BSc (Hons) in Software Engineering
 - **Course Module:** SE32022: Rapid Application Development (RAD)
 - **Institution:** General Sir John Kotelawala Defence University (KDU)
@@ -11,7 +11,7 @@
 
 ## 1. My Role & Contributions
 
-As the **Scrum Master (SM)**, my primary responsibilities were facilitating Scrum ceremonies, tracking team velocity, removing blockers, updating sprint documentation, and keeping the GitHub Projects board up to date. Additionally, I actively developed user interface mockups, user journey flows, and front-end layout components across all 5 sprints.
+As the **Scrum Master (SM)**, my primary responsibilities were facilitating Scrum ceremonies, tracking team velocity, removing blockers, updating sprint documentation, and keeping the GitHub Projects board up to date. In addition to core Scrum Master duties, I provided extra cross-functional support for UI/UX layouts, component styling, and frontend implementations across all 5 sprints to ensure the team met deliverables on time.
 
 ### Significant Commits & Pull Requests Authored
 
@@ -35,7 +35,7 @@ As the **Scrum Master (SM)**, my primary responsibilities were facilitating Scru
 - **`1fbd859`** - *Revise sprint journal entries and discussions*
 - **`744788a`** - *Revise goals and issue titles in product backlog*
 
-#### Frontend UI Layouts & Feature Implementation
+#### Extra Support & Frontend/UI Implementations
 - **`a6f0f3e`** - *add admin(trainer) dashboard files*
 - **`3a77445`** - *Add membership plans java script*
 - **`39094ae`** - *Add membership plan.css*
