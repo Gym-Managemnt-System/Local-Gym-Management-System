@@ -73,3 +73,13 @@ As Scrum Master, I organized short daily standup calls and alignment sessions to
 ## 3. Verified Contribution Audit
 
 My contributions are verified through regular Git commit history spanning all Sprints, management of the GitHub Projects Kanban board, pull request reviews, and authored UI/dashboard modules.
+
+
+## 4. Verification Artifacts & Project Links
+
+- **GitHub Profile:** [@nikeshala3258](https://github.com/nikeshala3258)
+- **Main GitHub Repository:** [Local-Gym-Management-System](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System)
+- **Agile Project Board:** [GitHub Projects - Sprint Kanban Board](https://github.com/orgs/Gym-Managemnt-System/projects/3)
+- **Sprint Documentation & Artifacts:** [Sprint Journals, Retrospectives & Definition of Done](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/tree/feature/backend-setup/docs)
+- **Pull Request Contributions:** [Scrum Master Merged PRs](https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/pulls?q=is%3Apr+is%3Aclosed)
+- **Local Application Host:** `http://localhost:5000`
