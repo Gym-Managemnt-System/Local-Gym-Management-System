@@ -1,5 +1,5 @@
 Individual Agile Portfolio & Reflection
-Student ID: [INSERT_YOUR_STUDENT_ID_HERE]
+Student ID: [D-BSE-24-0026]
 
 GitHub Username: @Aranya12345678
 
@@ -7,11 +7,11 @@ Repository: Gym-Managemnt-System/Local-Gym-Management-System
 
 1. My Role & Contributions
 Primary Responsibilities
-Throughout the development of the Local Gym Management System, my primary responsibilities centered around Frontend UI Integration, Trainer Management Module Development, and Branch Maintenance & Merge Conflict Resolution.
+Throughout the development of the Local Gym Management System, my primary responsibilities centered around Frontend UI Integration, Admin Management Module Development, and Branch Maintenance & Merge Conflict Resolution.
 
 key contributions include:
 
-Frontend UI Layouts & Scripting: Built and integrated interactive interfaces across core views including dashboard.html, trainers.html, members.html, and login.html.
+Frontend UI Layouts & Scripting: Built and integrated interactive interfaces across core views including payments.html, trainers.html, members.html, classes.html  and login.html.
 
 API Integration & Endpoint Testing: Connected frontend scripts (trainers-script.js, register-trainer-script.js) to Express backend controllers (/api/trainers/register), verifying token-based authentication (JWT) and request/response payloads via curl and browser developer tools.
 
@@ -61,14 +61,9 @@ We adopted an incremental delivery model, isolating full-stack flows (e.g., Trai
 → JWT Auth Validation 
 → Dynamic Table Render) to verify end-to-end functionality before merging pull requests.
 
-Instructions for Submission:
-Create a file named portfolio-[YOUR_STUDENT_ID].md (replace [YOUR_STUDENT_ID] with your actual ID, e.g., portfolio-it12345678.md).
 
-Place this file directly in the root directory of your local repository.
 
-Commit and push it to GitHub before the Week 10 deadline:
 
-Bash
-git add portfolio-[YOUR_STUDENT_ID].md
-git commit -m "Add individual Agile portfolio and reflection"
+
+
 git push origin feature/backend-setup
