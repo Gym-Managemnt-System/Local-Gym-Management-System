@@ -174,9 +174,9 @@ Building the Member Module showed me the system from the member's point of view,
 
 | Evidence | Location |
 |---|---|
-| Member Module source code | `member/` folder in the repository |
-| Software Requirements Specification | [add path or link] |
-| Client Meeting Log | [add path or link] |
-| UAT Acceptance Document | [add path or link] |
-| User Manual | [add path or link] |
+| Member Module source code | [https://github.com/Gym-Managemnt-System/Local-Gym-Management-System.git] |
+| Software Requirements Specification 
+| Client Meeting Log | [docs/Client-Meetings-Log.docx] |
+| UAT Acceptance Document | [docs/UAT-Acceptanced-Document.docx] |
+| User Manual | [docs/User-Manual.docx] |
 | GitHub issue #17 | https://github.com/Gym-Managemnt-System/Local-Gym-Management-System/issues/17 |
