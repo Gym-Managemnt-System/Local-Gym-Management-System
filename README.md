@@ -89,7 +89,7 @@ This project was developed by a four-member team using the Rapid Application Dev
 - Planned and coordinated User Acceptance Testing and obtained client acceptance
 - Built the Member Module (login, register, dashboard, profile, attendance, payments, book a class, no-membership and reports pages, with shared CSS and JavaScript)
 
-Scrum Master: T.H. Nikeshala Dewindi (D/BSE/24/0025)
+### Scrum Master: T.H. Nikeshala Dewindi (D/BSE/24/0025)
 -Facilitated all Scrum ceremonies (daily standups, sprint planning, reviews, retrospectives) and tracked team velocity.
 -Maintained and updated the GitHub Projects Kanban board and issue backlogs across all 5 sprints.
 -Authored Definition of Done (DoD), sprint journals, retrospectives, and issue linkage documentation.
