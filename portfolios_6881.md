@@ -17,13 +17,13 @@ As the *Backend Developer*, my responsibility was the core system architecture, 
 ### Significant Commits Authored
 
 #### Backend Setup & Core Architecture
-- *803f2a6* - Add backend setup: auth, members, attendance, payments, transfer report
+- 803f2a6 - Add backend setup: auth, members, attendance, payments, transfer report
 
 #### Backend Implementation
-- *8d87f25* - Add backend implementation
+- 8d87f25 - Add backend implementation
 
 #### Frontend–Backend Integration
-- *d4026ee* - Connect dashboard, membership plans and reports
+- d4026ee - Connect dashboard, membership plans and reports
 
 ### Core System Architecture
 
