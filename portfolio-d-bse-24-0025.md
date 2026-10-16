@@ -51,4 +51,25 @@ As the **Scrum Master (SM)**, my primary responsibilities were facilitating Scru
 - **`69747d8`** - *Add attendence.html*
 - **`98f27fb`** - *Add checkin.js*
 - **`3bb5d37`** - *Add checkin.css*
-- **`b2bc3eb`** - *Add manual-checkin
+- **`b2bc3eb`** - *Add manual-checkin.html*
+- **`3902c7c`** - *Add trainers-dashboard.js*
+
+---
+
+## 2. Critical Agile Reflection
+
+### Team Bottleneck Faced
+During Sprints 3 and 4, our development team faced a bottleneck in synchronizing frontend user interface forms (such as member registration, check-ins, and attendance logs) with backend form handlers and database data entry logic. Additionally, during Sprint 5 (Hardening & Handover), minor environment setup inconsistencies and configuration clashes emerged while preparing the system for local deployment and final viva demonstration.
+
+### Adaptation & Self-Organization
+As Scrum Master, I organized short daily standup calls and alignment sessions to establish clear data-flow structures between frontend inputs and backend processing scripts. For Sprint 5 handover, I coordinated a robust local staging protocol—consolidating all database initialization scripts, configuration templates, and startup documentation to ensure a seamless, error-free demonstration setup directly from local developer machines during the final evaluation. I also enforced strict Pull Request guidelines requiring developers to rebase feature branches onto the main integration branch, ensuring clean merges without breaking active builds.
+
+### Applied Engineering Practices
+- **Code Reviews:** Conducted pull request reviews prior to merging into main to verify interface consistency, proper data handling, and clean code structure.
+- **Pair Programming:** Organized targeted pair programming sessions between frontend and backend contributors to resolve UI event bindings and data persistence workflow glitches.
+
+---
+
+## 3. Verified Contribution Audit
+
+My contributions are verified through regular Git commit history spanning all Sprints, management of the GitHub Projects Kanban board, pull request reviews, and authored UI/dashboard modules.
