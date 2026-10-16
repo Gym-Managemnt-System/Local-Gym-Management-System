@@ -114,11 +114,11 @@ This project was developed by a four-member team using the Rapid Application Dev
 - Client: Team 02
 - Client representative: Lakindu Abeyrathne
 
-Project Verification & Links
-Main Project Repository: Local-Gym-Management-System
-Local Application Host: http://localhost:5000
-Agile Kanban Board: GitHub Projects - Sprint Board
-Sprint Documentation: Sprint Journals, Retrospectives & Definition of Done
+###Project Verification & Links
+-Main Project Repository: Local-Gym-Management-System
+-Local Application Host: http://localhost:5000
+-Agile Kanban Board: GitHub Projects - Sprint Board
+-Sprint Documentation: Sprint Journals, Retrospectives & Definition of Done
 
 
 
